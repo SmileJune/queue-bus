@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="750" viewBox="0 0 1280 750" role="img">
+  <defs>
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#475569" />
+    </marker>
+    <style>
+      .title { font-family: AppleGothic, Arial, sans-serif; font-size: 30px; font-weight: 700; fill: #0f172a; }
+      .subtitle { font-family: AppleGothic, Arial, sans-serif; font-size: 18px; font-weight: 400; fill: #475569; }
+      .station { font-family: AppleGothic, Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #0f172a; }
+      .meta { font-family: AppleGothic, Arial, sans-serif; font-size: 15px; font-weight: 400; fill: #64748b; }
+      .axis { font-family: AppleGothic, Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #334155; }
+      .value { font-family: AppleGothic, Arial, sans-serif; font-size: 17px; font-weight: 700; fill: #0f172a; }
+      .bucket { font-family: AppleGothic, Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #334155; }
+      .cell { font-family: AppleGothic, Arial, sans-serif; font-size: 14px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+      .legend { font-family: AppleGothic, Arial, sans-serif; font-size: 14px; font-weight: 500; fill: #334155; }
+      .footnote { font-family: AppleGothic, Arial, sans-serif; font-size: 14px; font-weight: 400; fill: #64748b; }
+      .boxTitle { font-family: AppleGothic, Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #0f172a; }
+      .boxBody { font-family: AppleGothic, Arial, sans-serif; font-size: 16px; font-weight: 400; fill: #475569; }
+      .step { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #ffffff; text-anchor: middle; dominant-baseline: middle; }
+      .arrow { fill: none; stroke: #475569; stroke-width: 3; marker-end: url(#arrowHead); }
+    </style>
+  </defs>
+  <rect width="1280" height="750" fill="#ffffff" />
+  
+      <text x="48" y="58" class="title">M4137 다음 버스 승차 가능성 판단 지표</text>
+      <text x="48" y="92" class="subtitle">잔여좌석 분포는 줄을 세우기 위한 자료가 아니라, 호출 구간·다음차 안내·운영 알림을 정하는 신호입니다.</text>
+      <text x="432" y="126" class="axis">하위 20% 잔여좌석</text>
+      <text x="754" y="126" class="axis">다음차 안내 신호</text>
+      
+        <rect x="48" y="126" width="1184" height="72" rx="8" fill="#f8fafc" />
+        <text x="72" y="150" class="station">29. 국가인권위</text>
+        <text x="72" y="176" class="meta">샘플 196개 · 3일 · 일반 호출 가능</text>
+        <rect x="432" y="136" width="278" height="18" rx="4" fill="#e2e8f0" />
+        <rect x="432" y="136" width="180.70000000000002" height="18" rx="4" fill="#047857" />
+        <text x="726" y="152" class="value">p20 26석</text>
+        <rect x="754" y="164" width="278" height="18" rx="4" fill="#fee2e2" />
+        <rect x="754" y="164" width="3.475" height="18" rx="4" fill="#e11d48" />
+        <text x="1048" y="180" class="value">신호 1%</text>
+      
+
+        <rect x="48" y="210" width="1184" height="72" rx="8" fill="#ffffff" />
+        <text x="72" y="234" class="station">31. 서울시청</text>
+        <text x="72" y="260" class="meta">샘플 247개 · 3일 · 일반 호출 가능</text>
+        <rect x="432" y="220" width="278" height="18" rx="4" fill="#e2e8f0" />
+        <rect x="432" y="220" width="222.4" height="18" rx="4" fill="#047857" />
+        <text x="726" y="236" class="value">p20 32석</text>
+        <rect x="754" y="248" width="278" height="18" rx="4" fill="#fee2e2" />
+        <rect x="754" y="248" width="0" height="18" rx="4" fill="#e11d48" />
+        <text x="1048" y="264" class="value">신호 0%</text>
+      
+
+        <rect x="48" y="294" width="1184" height="72" rx="8" fill="#f8fafc" />
+        <text x="72" y="318" class="station">33. 신한은행본점</text>
+        <text x="72" y="344" class="meta">샘플 332개 · 3일 · 일반 호출 가능</text>
+        <rect x="432" y="304" width="278" height="18" rx="4" fill="#e2e8f0" />
+        <rect x="432" y="304" width="173.75" height="18" rx="4" fill="#047857" />
+        <text x="726" y="320" class="value">p20 25석</text>
+        <rect x="754" y="332" width="278" height="18" rx="4" fill="#fee2e2" />
+        <rect x="754" y="332" width="0" height="18" rx="4" fill="#e11d48" />
+        <text x="1048" y="348" class="value">신호 0%</text>
+      
+
+        <rect x="48" y="378" width="1184" height="72" rx="8" fill="#ffffff" />
+        <text x="72" y="402" class="station">34. 서울역환승센터</text>
+        <text x="72" y="428" class="meta">샘플 377개 · 3일 · 일반 호출 가능</text>
+        <rect x="432" y="388" width="278" height="18" rx="4" fill="#e2e8f0" />
+        <rect x="432" y="388" width="104.25" height="18" rx="4" fill="#b45309" />
+        <text x="726" y="404" class="value">p20 15석</text>
+        <rect x="754" y="416" width="278" height="18" rx="4" fill="#fee2e2" />
+        <rect x="754" y="416" width="28.494999999999997" height="18" rx="4" fill="#e11d48" />
+        <text x="1048" y="432" class="value">신호 8.2%</text>
+      
+
+        <rect x="48" y="462" width="1184" height="72" rx="8" fill="#f8fafc" />
+        <text x="72" y="486" class="station">38. 명동입구</text>
+        <text x="72" y="512" class="meta">샘플 452개 · 3일 · 다음차 안내 필요</text>
+        <rect x="432" y="472" width="278" height="18" rx="4" fill="#e2e8f0" />
+        <rect x="432" y="472" width="0" height="18" rx="4" fill="#c2410c" />
+        <text x="726" y="488" class="value">p20 0석</text>
+        <rect x="754" y="500" width="278" height="18" rx="4" fill="#fee2e2" />
+        <rect x="754" y="500" width="111.5475" height="18" rx="4" fill="#e11d48" />
+        <text x="1048" y="516" class="value">신호 32.1%</text>
+      
+
+        <rect x="48" y="546" width="1184" height="72" rx="8" fill="#ffffff" />
+        <text x="72" y="570" class="station">39. 명동성당</text>
+        <text x="72" y="596" class="meta">샘플 151개 · 3일 · 다음차 안내 필요</text>
+        <rect x="432" y="556" width="278" height="18" rx="4" fill="#e2e8f0" />
+        <rect x="432" y="556" width="0" height="18" rx="4" fill="#c2410c" />
+        <text x="726" y="572" class="value">p20 0석</text>
+        <rect x="754" y="584" width="278" height="18" rx="4" fill="#fee2e2" />
+        <rect x="754" y="584" width="154.29" height="18" rx="4" fill="#e11d48" />
+        <text x="1048" y="600" class="value">신호 44.4%</text>
+      
+      <text x="48" y="716" class="footnote">출처: 경기도 GBIS 공식 API 수집 결과, docs/15-gbis-evidence-report.md 생성값</text>
+    
+</svg>

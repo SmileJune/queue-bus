@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="420" viewBox="0 0 1440 420" role="img">
+  <defs>
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#475569" />
+    </marker>
+    <style>
+      .title { font-family: AppleGothic, Arial, sans-serif; font-size: 30px; font-weight: 700; fill: #0f172a; }
+      .subtitle { font-family: AppleGothic, Arial, sans-serif; font-size: 18px; font-weight: 400; fill: #475569; }
+      .station { font-family: AppleGothic, Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #0f172a; }
+      .meta { font-family: AppleGothic, Arial, sans-serif; font-size: 15px; font-weight: 400; fill: #64748b; }
+      .axis { font-family: AppleGothic, Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #334155; }
+      .value { font-family: AppleGothic, Arial, sans-serif; font-size: 17px; font-weight: 700; fill: #0f172a; }
+      .bucket { font-family: AppleGothic, Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #334155; }
+      .cell { font-family: AppleGothic, Arial, sans-serif; font-size: 14px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+      .legend { font-family: AppleGothic, Arial, sans-serif; font-size: 14px; font-weight: 500; fill: #334155; }
+      .footnote { font-family: AppleGothic, Arial, sans-serif; font-size: 14px; font-weight: 400; fill: #64748b; }
+      .boxTitle { font-family: AppleGothic, Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #0f172a; }
+      .boxBody { font-family: AppleGothic, Arial, sans-serif; font-size: 16px; font-weight: 400; fill: #475569; }
+      .step { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #ffffff; text-anchor: middle; dominant-baseline: middle; }
+      .arrow { fill: none; stroke: #475569; stroke-width: 3; marker-end: url(#arrowHead); }
+    </style>
+  </defs>
+  <rect width="1440" height="420" fill="#ffffff" />
+  
+      <text x="64" y="64" class="title">QueueBus 서비스 흐름</text>
+      <text x="64" y="100" class="subtitle">좌석 예약이 아니라 줄 대신 대기번호로 기다리게 하고, AI가 다음 버스 승차 가능성과 운영 수요 신호를 계산합니다.</text>
+      
+        <rect x="64" y="150" width="232" height="128" rx="12" fill="#ffffff" stroke="#0f766e" stroke-width="3" />
+        <circle cx="96" cy="182" r="16" fill="#0f766e" />
+        <text x="96" y="188" class="step">1</text>
+        <text x="124" y="190" class="boxTitle">위치 인증</text>
+        <text x="92" y="232" class="boxBody">정류장 100m 반경 체크인</text>
+        <path d="M 304 214 L 328 214" class="arrow" />
+      
+
+        <rect x="338" y="150" width="232" height="128" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="3" />
+        <circle cx="370" cy="182" r="16" fill="#2563eb" />
+        <text x="370" y="188" class="step">2</text>
+        <text x="398" y="190" class="boxTitle">가상 대기번호</text>
+        <text x="366" y="232" class="boxBody">줄 대신 순번 유지</text>
+        <path d="M 578 214 L 602 214" class="arrow" />
+      
+
+        <rect x="612" y="150" width="232" height="128" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="3" />
+        <circle cx="644" cy="182" r="16" fill="#7c3aed" />
+        <text x="644" y="188" class="step">3</text>
+        <text x="672" y="190" class="boxTitle">승차 가능성</text>
+        <text x="640" y="232" class="boxBody">이번·다음 버스 판단</text>
+        <path d="M 852 214 L 876 214" class="arrow" />
+      
+
+        <rect x="886" y="150" width="232" height="128" rx="12" fill="#ffffff" stroke="#c2410c" stroke-width="3" />
+        <circle cx="918" cy="182" r="16" fill="#c2410c" />
+        <text x="918" y="188" class="step">4</text>
+        <text x="946" y="190" class="boxTitle">탑승 호출</text>
+        <text x="914" y="232" class="boxBody">가능 구간만 대기 위치로</text>
+        <path d="M 1126 214 L 1150 214" class="arrow" />
+      
+
+        <rect x="1160" y="150" width="232" height="128" rx="12" fill="#ffffff" stroke="#334155" stroke-width="3" />
+        <circle cx="1192" cy="182" r="16" fill="#334155" />
+        <text x="1192" y="188" class="step">5</text>
+        <text x="1220" y="190" class="boxTitle">운영 신호</text>
+        <text x="1188" y="232" class="boxBody">운수사에 수요 데이터 제공</text>
+        
+      
+      <text x="64" y="352" class="footnote">심사서 삽입 위치: Ⅰ-1 개발 동기 또는 Ⅳ 기술성</text>
+    
+</svg>

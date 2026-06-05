@@ -1,0 +1,11 @@
+[Unit]
+Description=Run QueueBus GBIS peak arrival collector every 2 minutes
+
+[Timer]
+OnBootSec=90s
+OnUnitActiveSec=2min
+RandomizedDelaySec=15s
+Unit=queuebus-gbis-peak-arrivals.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,17 @@
+{
+  "pollIntervalSeconds": 60,
+  "includeArrivalSnapshots": false,
+  "outputPath": "data/gbis-seat-snapshots.csv",
+  "targets": [
+    {
+      "enabled": false,
+      "label": "replace-with-target-stop-and-route",
+      "routeId": "replace-with-gbis-route-id",
+      "routeName": "replace-with-route-name",
+      "targetStationId": "replace-with-gbis-station-id",
+      "targetStationName": "replace-with-station-name",
+      "targetStationSeq": 0,
+      "staOrder": 0
+    }
+  ]
+}

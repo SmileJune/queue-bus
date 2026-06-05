@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560" role="img">
+  <defs>
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#475569" />
+    </marker>
+    <style>
+      .title { font-family: AppleGothic, Arial, sans-serif; font-size: 30px; font-weight: 700; fill: #0f172a; }
+      .subtitle { font-family: AppleGothic, Arial, sans-serif; font-size: 18px; font-weight: 400; fill: #475569; }
+      .station { font-family: AppleGothic, Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #0f172a; }
+      .meta { font-family: AppleGothic, Arial, sans-serif; font-size: 15px; font-weight: 400; fill: #64748b; }
+      .axis { font-family: AppleGothic, Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #334155; }
+      .value { font-family: AppleGothic, Arial, sans-serif; font-size: 17px; font-weight: 700; fill: #0f172a; }
+      .bucket { font-family: AppleGothic, Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #334155; }
+      .cell { font-family: AppleGothic, Arial, sans-serif; font-size: 14px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+      .legend { font-family: AppleGothic, Arial, sans-serif; font-size: 14px; font-weight: 500; fill: #334155; }
+      .footnote { font-family: AppleGothic, Arial, sans-serif; font-size: 14px; font-weight: 400; fill: #64748b; }
+      .boxTitle { font-family: AppleGothic, Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #0f172a; }
+      .boxBody { font-family: AppleGothic, Arial, sans-serif; font-size: 16px; font-weight: 400; fill: #475569; }
+      .step { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #ffffff; text-anchor: middle; dominant-baseline: middle; }
+      .arrow { fill: none; stroke: #475569; stroke-width: 3; marker-end: url(#arrowHead); }
+    </style>
+  </defs>
+  <rect width="1280" height="560" fill="#ffffff" />
+  
+      <text x="70" y="64" class="title">개인정보·위치정보 보호 구조</text>
+      <text x="70" y="100" class="subtitle">정밀 이동 경로를 장기 저장하지 않고, 운영자는 집계 데이터만 확인합니다.</text>
+      
+      <rect x="70" y="160" width="250" height="112" rx="12" fill="#ffffff" stroke="#0f766e" stroke-width="3" />
+      <text x="94" y="200" class="boxTitle">사용자 단말</text>
+      <text x="94" y="236" class="boxBody">현재 위치는 체크인 순간에만 사용</text>
+    
+
+      <rect x="360" y="160" width="250" height="112" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="3" />
+      <text x="384" y="200" class="boxTitle">지오펜스 검증</text>
+      <text x="384" y="236" class="boxBody">정류장 반경 내 도착 여부만 판정</text>
+    
+
+      <rect x="650" y="160" width="250" height="112" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="3" />
+      <text x="674" y="200" class="boxTitle">대기열 이벤트</text>
+      <text x="674" y="236" class="boxBody">대기번호·호출·탑승 이벤트 저장</text>
+    
+
+      <rect x="360" y="348" width="250" height="112" rx="12" fill="#ffffff" stroke="#c2410c" stroke-width="3" />
+      <text x="384" y="388" class="boxTitle">집계 처리</text>
+      <text x="384" y="424" class="boxBody">정류장·노선·시간대 집계</text>
+    
+
+      <rect x="650" y="348" width="250" height="112" rx="12" fill="#ffffff" stroke="#334155" stroke-width="3" />
+      <text x="674" y="388" class="boxTitle">운영 대시보드</text>
+      <text x="674" y="424" class="boxBody">개인 위치 없이 집계 지표 표시</text>
+    
+      <path d="M 320 216 L 350 216" class="arrow" />
+      <path d="M 610 216 L 640 216" class="arrow" />
+      <path d="M 775 276 L 520 342" class="arrow" />
+      <path d="M 610 404 L 640 404" class="arrow" />
+      <rect x="948" y="210" width="240" height="150" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" />
+      <text x="972" y="250" class="boxTitle">보호 원칙</text>
+      <text x="972" y="288" class="boxBody">목적 제한 · 최소 수집</text>
+      <text x="972" y="320" class="boxBody">개인 위치 미표시</text>
+      <text x="972" y="352" class="boxBody">탑승 후 보관 최소화</text>
+      <text x="70" y="500" class="footnote">심사서 삽입 위치: Ⅳ 기술성 개인정보 및 위치정보 보호 항목</text>
+    
+</svg>

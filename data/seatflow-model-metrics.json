@@ -1,0 +1,372 @@
+{
+  "generatedAt": "2026-06-02T07:04:30.806Z",
+  "dataset": {
+    "rows": 1937,
+    "dates": [
+      {
+        "date": "2026-05-28",
+        "count": 242
+      },
+      {
+        "date": "2026-05-29",
+        "count": 410
+      },
+      {
+        "date": "2026-05-30",
+        "count": 311
+      },
+      {
+        "date": "2026-05-31",
+        "count": 249
+      },
+      {
+        "date": "2026-06-01",
+        "count": 436
+      },
+      {
+        "date": "2026-06-02",
+        "count": 289
+      }
+    ],
+    "targets": [
+      {
+        "target": "m4137-dongtan-to-seoul-03-hosubuyeong1",
+        "count": 244
+      },
+      {
+        "target": "m4137-seoul-to-dongtan-29-human-rights-commission",
+        "count": 224
+      },
+      {
+        "target": "m4137-seoul-to-dongtan-39-myeongdong-cathedral",
+        "count": 206
+      },
+      {
+        "target": "m4137-dongtan-to-seoul-06-yesolcho",
+        "count": 189
+      },
+      {
+        "target": "m4137-dongtan-to-seoul-05-hansinthehue",
+        "count": 178
+      },
+      {
+        "target": "m4137-seoul-to-dongtan-31-seoul-city-hall",
+        "count": 168
+      },
+      {
+        "target": "m4137-dongtan-to-seoul-07-sinan2-bando4",
+        "count": 161
+      },
+      {
+        "target": "m4137-dongtan-to-seoul-04-changuigo",
+        "count": 159
+      },
+      {
+        "target": "m4137-dongtan-to-seoul-09-sangrok-gyeongnam",
+        "count": 131
+      },
+      {
+        "target": "m4137-seoul-to-dongtan-38-myeongdong-entrance",
+        "count": 114
+      },
+      {
+        "target": "m4137-seoul-to-dongtan-34-seoul-station-transfer-center",
+        "count": 77
+      },
+      {
+        "target": "m4137-dongtan-to-seoul-10-dongtan-technovalley",
+        "count": 63
+      },
+      {
+        "target": "m4137-seoul-to-dongtan-33-shinhan-bank-head-office",
+        "count": 23
+      }
+    ],
+    "lowSeatRate": 0.1874,
+    "zeroSeatRate": 0.1141
+  },
+  "split": {
+    "strategy": "latest_kst_date_holdout",
+    "trainRows": 1648,
+    "validationRows": 289,
+    "trainDates": [
+      "2026-05-28",
+      "2026-05-29",
+      "2026-05-30",
+      "2026-05-31",
+      "2026-06-01"
+    ],
+    "validationDates": [
+      "2026-06-02"
+    ]
+  },
+  "baseline": {
+    "model": "target_label + before_station_seq average seat-delta fallback",
+    "train": {
+      "rows": 1648,
+      "mae": 3.8923,
+      "rmse": 5.902,
+      "bias": 0.2495,
+      "thresholds": {
+        "lowSeatThreshold": 10,
+        "zeroSeatThreshold": 5.5
+      },
+      "lowSeat": {
+        "tp": 248,
+        "fp": 8,
+        "tn": 1322,
+        "fn": 70,
+        "precision": 0.9688,
+        "recall": 0.7799,
+        "f1": 0.8641
+      },
+      "zeroSeat": {
+        "tp": 182,
+        "fp": 29,
+        "tn": 1415,
+        "fn": 22,
+        "precision": 0.8626,
+        "recall": 0.8922,
+        "f1": 0.8771
+      }
+    },
+    "validation": {
+      "rows": 289,
+      "mae": 3.9629,
+      "rmse": 5.5592,
+      "bias": -0.5437,
+      "thresholds": {
+        "lowSeatThreshold": 10,
+        "zeroSeatThreshold": 5.5
+      },
+      "lowSeat": {
+        "tp": 33,
+        "fp": 0,
+        "tn": 244,
+        "fn": 12,
+        "precision": 1,
+        "recall": 0.7333,
+        "f1": 0.8462
+      },
+      "zeroSeat": {
+        "tp": 14,
+        "fp": 8,
+        "tn": 264,
+        "fn": 3,
+        "precision": 0.6364,
+        "recall": 0.8235,
+        "f1": 0.7179
+      }
+    },
+    "thresholds": {
+      "lowSeatThreshold": 10,
+      "zeroSeatThreshold": 5.5
+    }
+  },
+  "randomForest": {
+    "model": "pure-js random forest regressor",
+    "params": {
+      "forestSize": 80,
+      "maxDepth": 7,
+      "minSamplesLeaf": 8,
+      "featureSampleCount": 4,
+      "features": [
+        "target_station_seq",
+        "before_station_seq",
+        "remaining_stops",
+        "before_remain_seat_count",
+        "kst_minute_sin",
+        "kst_minute_cos",
+        "day_of_week",
+        "is_weekend",
+        "direction_code"
+      ]
+    },
+    "train": {
+      "rows": 1648,
+      "mae": 2.8621,
+      "rmse": 4.1953,
+      "bias": 0.0193,
+      "thresholds": {
+        "lowSeatThreshold": 10,
+        "zeroSeatThreshold": 5
+      },
+      "lowSeat": {
+        "tp": 278,
+        "fp": 11,
+        "tn": 1319,
+        "fn": 40,
+        "precision": 0.9619,
+        "recall": 0.8742,
+        "f1": 0.916
+      },
+      "zeroSeat": {
+        "tp": 186,
+        "fp": 37,
+        "tn": 1407,
+        "fn": 18,
+        "precision": 0.8341,
+        "recall": 0.9118,
+        "f1": 0.8712
+      }
+    },
+    "validation": {
+      "rows": 289,
+      "mae": 3.187,
+      "rmse": 4.3762,
+      "bias": -0.6279,
+      "thresholds": {
+        "lowSeatThreshold": 10,
+        "zeroSeatThreshold": 5
+      },
+      "lowSeat": {
+        "tp": 39,
+        "fp": 2,
+        "tn": 242,
+        "fn": 6,
+        "precision": 0.9512,
+        "recall": 0.8667,
+        "f1": 0.907
+      },
+      "zeroSeat": {
+        "tp": 15,
+        "fp": 10,
+        "tn": 262,
+        "fn": 2,
+        "precision": 0.6,
+        "recall": 0.8824,
+        "f1": 0.7143
+      }
+    },
+    "thresholds": {
+      "lowSeatThreshold": 10,
+      "zeroSeatThreshold": 5
+    },
+    "overfit": {
+      "maeGap": 0.3249,
+      "maeGapRatio": 0.1135,
+      "warning": "학습/검증 오차 차이가 MVP 기준에서 과도하지 않습니다."
+    },
+    "featureUsage": [
+      {
+        "feature": "before_remain_seat_count",
+        "count": 1933
+      },
+      {
+        "feature": "kst_minute_cos",
+        "count": 1005
+      },
+      {
+        "feature": "kst_minute_sin",
+        "count": 976
+      },
+      {
+        "feature": "before_station_seq",
+        "count": 627
+      },
+      {
+        "feature": "target_station_seq",
+        "count": 577
+      },
+      {
+        "feature": "day_of_week",
+        "count": 445
+      },
+      {
+        "feature": "remaining_stops",
+        "count": 16
+      }
+    ]
+  },
+  "dateCrossValidation": {
+    "folds": [
+      {
+        "validationDate": "2026-05-28",
+        "trainRows": 1695,
+        "validationRows": 242,
+        "baselineMae": 4.7655,
+        "randomForestMae": 3.3749,
+        "randomForestLowSeatF1": 0.8675,
+        "randomForestZeroSeatRecall": 0.8387,
+        "maeImprovement": 0.2918
+      },
+      {
+        "validationDate": "2026-05-29",
+        "trainRows": 1527,
+        "validationRows": 410,
+        "baselineMae": 3.8358,
+        "randomForestMae": 3.1701,
+        "randomForestLowSeatF1": 0.9,
+        "randomForestZeroSeatRecall": 0.8542,
+        "maeImprovement": 0.1735
+      },
+      {
+        "validationDate": "2026-05-30",
+        "trainRows": 1626,
+        "validationRows": 311,
+        "baselineMae": 3.9426,
+        "randomForestMae": 4.1888,
+        "randomForestLowSeatF1": 0.8571,
+        "randomForestZeroSeatRecall": 0.6667,
+        "maeImprovement": -0.0624
+      },
+      {
+        "validationDate": "2026-05-31",
+        "trainRows": 1688,
+        "validationRows": 249,
+        "baselineMae": 3.7978,
+        "randomForestMae": 4.0088,
+        "randomForestLowSeatF1": 0.907,
+        "randomForestZeroSeatRecall": 0.6786,
+        "maeImprovement": -0.0556
+      },
+      {
+        "validationDate": "2026-06-01",
+        "trainRows": 1501,
+        "validationRows": 436,
+        "baselineMae": 4.3114,
+        "randomForestMae": 3.3775,
+        "randomForestLowSeatF1": 0.8718,
+        "randomForestZeroSeatRecall": 0.8654,
+        "maeImprovement": 0.2166
+      },
+      {
+        "validationDate": "2026-06-02",
+        "trainRows": 1648,
+        "validationRows": 289,
+        "baselineMae": 3.9629,
+        "randomForestMae": 3.242,
+        "randomForestLowSeatF1": 0.9091,
+        "randomForestZeroSeatRecall": 0.8824,
+        "maeImprovement": 0.1819
+      }
+    ],
+    "summary": {
+      "foldCount": 6,
+      "baselineMaeMean": 4.1027,
+      "randomForestMaeMean": 3.5604,
+      "randomForestLowSeatF1Mean": 0.8854,
+      "randomForestZeroSeatRecallMean": 0.7977,
+      "maeImprovementMean": 0.1243
+    }
+  },
+  "comparison": {
+    "maeImprovement": 0.1958,
+    "rmseImprovement": 0.2128,
+    "verdict": "Random Forest가 규칙 baseline보다 의미 있게 개선했습니다."
+  },
+  "guardrails": {
+    "leakageControls": [
+      "latest KST date holdout validation",
+      "no random row-level validation split as the primary score",
+      "baseline comparison required",
+      "tree depth and leaf size constrained",
+      "vehicle/target/date summaries reported for manual review"
+    ],
+    "limitations": [
+      "Only GBIS-derived labels are used; actual queue length and left-behind labels require app or field data.",
+      "Five observed days are enough for MVP evidence, not for production-level generalization claims.",
+      "Random Forest is implemented as a dependency-free baseline; LightGBM/XGBoost should be compared when dependencies are available."
+    ]
+  }
+}

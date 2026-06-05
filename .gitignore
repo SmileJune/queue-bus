@@ -1,0 +1,12 @@
+.env
+.env.codex-notify
+.DS_Store
+node_modules/
+dist/
+data/gbis-seat-snapshots.csv
+data/gbis-boarded-estimates.csv
+logs/
+.playwright-mcp/
+.serena/
+__pycache__/
+*.pyc

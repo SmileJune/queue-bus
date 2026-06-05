@@ -1,0 +1,8 @@
+[Unit]
+Description=QueueBus GBIS peak arrival collector
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/queue-bus
+ExecStart=/usr/bin/npm run gbis:collect:peak-arrivals
+Environment=NODE_ENV=production

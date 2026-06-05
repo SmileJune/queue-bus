@@ -1,0 +1,4264 @@
+{
+  "generatedAt": "2026-06-03T03:11:51.762810+00:00",
+  "dataset": {
+    "rows": 1937,
+    "dates": [
+      {
+        "date": "2026-05-28",
+        "count": 242
+      },
+      {
+        "date": "2026-05-29",
+        "count": 410
+      },
+      {
+        "date": "2026-05-30",
+        "count": 311
+      },
+      {
+        "date": "2026-05-31",
+        "count": 249
+      },
+      {
+        "date": "2026-06-01",
+        "count": 436
+      },
+      {
+        "date": "2026-06-02",
+        "count": 289
+      }
+    ],
+    "periods": [
+      {
+        "period": "commute_peak",
+        "count": 577
+      },
+      {
+        "period": "off_peak",
+        "count": 1360
+      }
+    ],
+    "seatRiskSegments": [
+      {
+        "segment": "low_1_10",
+        "count": 149
+      },
+      {
+        "segment": "mid_11_20",
+        "count": 205
+      },
+      {
+        "segment": "safe_21_plus",
+        "count": 1407
+      },
+      {
+        "segment": "zero",
+        "count": 176
+      }
+    ],
+    "lowSeatRate": 0.1874,
+    "zeroSeatRate": 0.1141
+  },
+  "split": {
+    "strategy": "latest_kst_date_holdout",
+    "trainRows": 1648,
+    "validationRows": 289,
+    "trainDates": [
+      "2026-05-28",
+      "2026-05-29",
+      "2026-05-30",
+      "2026-05-31",
+      "2026-06-01"
+    ],
+    "validationDates": [
+      "2026-06-02"
+    ]
+  },
+  "latestHoldout": {
+    "baseline": {
+      "rows": 289,
+      "mae": 3.9629,
+      "rmse": 5.5592,
+      "bias": -0.5437,
+      "thresholds": {
+        "lowSeatThreshold": 10.0,
+        "zeroSeatThreshold": 5.5
+      },
+      "lowSeat": {
+        "tp": 33,
+        "fp": 0,
+        "tn": 244,
+        "fn": 12,
+        "precision": 1.0,
+        "recall": 0.7333,
+        "f1": 0.8462
+      },
+      "zeroSeat": {
+        "tp": 14,
+        "fp": 8,
+        "tn": 264,
+        "fn": 3,
+        "precision": 0.6364,
+        "recall": 0.8235,
+        "f1": 0.7179
+      }
+    },
+    "randomForest": {
+      "rows": 289,
+      "mae": 3.6685,
+      "rmse": 5.0765,
+      "bias": -0.8652,
+      "thresholds": {
+        "lowSeatThreshold": 9.5,
+        "zeroSeatThreshold": 6.0
+      },
+      "lowSeat": {
+        "tp": 41,
+        "fp": 3,
+        "tn": 241,
+        "fn": 4,
+        "precision": 0.9318,
+        "recall": 0.9111,
+        "f1": 0.9213
+      },
+      "zeroSeat": {
+        "tp": 15,
+        "fp": 10,
+        "tn": 262,
+        "fn": 2,
+        "precision": 0.6,
+        "recall": 0.8824,
+        "f1": 0.7143
+      },
+      "train": {
+        "rows": 1648,
+        "mae": 3.2399,
+        "rmse": 4.6907,
+        "bias": 0.0056,
+        "thresholds": {
+          "lowSeatThreshold": 9.5,
+          "zeroSeatThreshold": 6.0
+        },
+        "lowSeat": {
+          "tp": 278,
+          "fp": 10,
+          "tn": 1320,
+          "fn": 40,
+          "precision": 0.9653,
+          "recall": 0.8742,
+          "f1": 0.9175
+        },
+        "zeroSeat": {
+          "tp": 187,
+          "fp": 40,
+          "tn": 1404,
+          "fn": 17,
+          "precision": 0.8238,
+          "recall": 0.9167,
+          "f1": 0.8677
+        }
+      }
+    },
+    "lightgbm": {
+      "rows": 289,
+      "mae": 2.6914,
+      "rmse": 3.6555,
+      "bias": -0.5444,
+      "thresholds": {
+        "lowSeatThreshold": 8.0,
+        "zeroSeatThreshold": 2.5
+      },
+      "lowSeat": {
+        "tp": 38,
+        "fp": 2,
+        "tn": 242,
+        "fn": 7,
+        "precision": 0.95,
+        "recall": 0.8444,
+        "f1": 0.8941
+      },
+      "zeroSeat": {
+        "tp": 15,
+        "fp": 10,
+        "tn": 262,
+        "fn": 2,
+        "precision": 0.6,
+        "recall": 0.8824,
+        "f1": 0.7143
+      },
+      "train": {
+        "rows": 1648,
+        "mae": 1.7859,
+        "rmse": 2.71,
+        "bias": 0.0284,
+        "thresholds": {
+          "lowSeatThreshold": 8.0,
+          "zeroSeatThreshold": 2.5
+        },
+        "lowSeat": {
+          "tp": 277,
+          "fp": 1,
+          "tn": 1329,
+          "fn": 41,
+          "precision": 0.9964,
+          "recall": 0.8711,
+          "f1": 0.9295
+        },
+        "zeroSeat": {
+          "tp": 192,
+          "fp": 23,
+          "tn": 1421,
+          "fn": 12,
+          "precision": 0.893,
+          "recall": 0.9412,
+          "f1": 0.9165
+        }
+      }
+    },
+    "xgboost": {
+      "rows": 289,
+      "mae": 2.7094,
+      "rmse": 3.6245,
+      "bias": -0.6386,
+      "thresholds": {
+        "lowSeatThreshold": 8.5,
+        "zeroSeatThreshold": 2.5
+      },
+      "lowSeat": {
+        "tp": 42,
+        "fp": 4,
+        "tn": 240,
+        "fn": 3,
+        "precision": 0.913,
+        "recall": 0.9333,
+        "f1": 0.9231
+      },
+      "zeroSeat": {
+        "tp": 13,
+        "fp": 9,
+        "tn": 263,
+        "fn": 4,
+        "precision": 0.5909,
+        "recall": 0.7647,
+        "f1": 0.6667
+      },
+      "train": {
+        "rows": 1648,
+        "mae": 1.7771,
+        "rmse": 2.6942,
+        "bias": 0.0307,
+        "thresholds": {
+          "lowSeatThreshold": 8.5,
+          "zeroSeatThreshold": 2.5
+        },
+        "lowSeat": {
+          "tp": 279,
+          "fp": 1,
+          "tn": 1329,
+          "fn": 39,
+          "precision": 0.9964,
+          "recall": 0.8774,
+          "f1": 0.9331
+        },
+        "zeroSeat": {
+          "tp": 192,
+          "fp": 23,
+          "tn": 1421,
+          "fn": 12,
+          "precision": 0.893,
+          "recall": 0.9412,
+          "f1": 0.9165
+        }
+      }
+    },
+    "lightgbmPeriodSpecialized": {
+      "rows": 289,
+      "mae": 2.8952,
+      "rmse": 3.9503,
+      "bias": -0.9781,
+      "thresholds": {
+        "lowSeatThreshold": 9.5,
+        "zeroSeatThreshold": 2.0
+      },
+      "lowSeat": {
+        "tp": 43,
+        "fp": 6,
+        "tn": 238,
+        "fn": 2,
+        "precision": 0.8776,
+        "recall": 0.9556,
+        "f1": 0.9149
+      },
+      "zeroSeat": {
+        "tp": 12,
+        "fp": 9,
+        "tn": 263,
+        "fn": 5,
+        "precision": 0.5714,
+        "recall": 0.7059,
+        "f1": 0.6316
+      },
+      "train": {
+        "rows": 1648,
+        "mae": 1.5188,
+        "rmse": 2.2782,
+        "bias": 0.0278,
+        "thresholds": {
+          "lowSeatThreshold": 9.5,
+          "zeroSeatThreshold": 2.0
+        },
+        "lowSeat": {
+          "tp": 290,
+          "fp": 5,
+          "tn": 1325,
+          "fn": 28,
+          "precision": 0.9831,
+          "recall": 0.9119,
+          "f1": 0.9462
+        },
+        "zeroSeat": {
+          "tp": 189,
+          "fp": 17,
+          "tn": 1427,
+          "fn": 15,
+          "precision": 0.9175,
+          "recall": 0.9265,
+          "f1": 0.922
+        }
+      },
+      "segmentColumn": "period_segment",
+      "trainedSegments": [
+        "commute_peak",
+        "off_peak"
+      ]
+    },
+    "lightgbmRiskSpecialized": {
+      "rows": 289,
+      "mae": 2.9089,
+      "rmse": 3.9787,
+      "bias": -0.5146,
+      "thresholds": {
+        "lowSeatThreshold": 11.0,
+        "zeroSeatThreshold": 3.0
+      },
+      "lowSeat": {
+        "tp": 41,
+        "fp": 8,
+        "tn": 236,
+        "fn": 4,
+        "precision": 0.8367,
+        "recall": 0.9111,
+        "f1": 0.8723
+      },
+      "zeroSeat": {
+        "tp": 14,
+        "fp": 10,
+        "tn": 262,
+        "fn": 3,
+        "precision": 0.5833,
+        "recall": 0.8235,
+        "f1": 0.6829
+      },
+      "train": {
+        "rows": 1648,
+        "mae": 1.5274,
+        "rmse": 2.3067,
+        "bias": 0.0199,
+        "thresholds": {
+          "lowSeatThreshold": 11.0,
+          "zeroSeatThreshold": 3.0
+        },
+        "lowSeat": {
+          "tp": 304,
+          "fp": 11,
+          "tn": 1319,
+          "fn": 14,
+          "precision": 0.9651,
+          "recall": 0.956,
+          "f1": 0.9605
+        },
+        "zeroSeat": {
+          "tp": 198,
+          "fp": 23,
+          "tn": 1421,
+          "fn": 6,
+          "precision": 0.8959,
+          "recall": 0.9706,
+          "f1": 0.9318
+        }
+      },
+      "segmentColumn": "seat_risk_segment",
+      "trainedSegments": [
+        "low_1_10",
+        "mid_11_20",
+        "safe_21_plus",
+        "zero"
+      ]
+    }
+  },
+  "dateCrossValidation": {
+    "baseline": {
+      "folds": [
+        {
+          "validationDate": "2026-05-28",
+          "trainRows": 1695,
+          "validationRows": 242,
+          "mae": 4.7655,
+          "rmse": 6.9066,
+          "lowSeatF1": 0.8642,
+          "zeroSeatRecall": 0.7742
+        },
+        {
+          "validationDate": "2026-05-29",
+          "trainRows": 1527,
+          "validationRows": 410,
+          "mae": 3.8358,
+          "rmse": 5.5884,
+          "lowSeatF1": 0.8611,
+          "zeroSeatRecall": 0.8542
+        },
+        {
+          "validationDate": "2026-05-30",
+          "trainRows": 1626,
+          "validationRows": 311,
+          "mae": 3.9426,
+          "rmse": 6.6934,
+          "lowSeatF1": 0.9355,
+          "zeroSeatRecall": 0.9556
+        },
+        {
+          "validationDate": "2026-05-31",
+          "trainRows": 1688,
+          "validationRows": 249,
+          "mae": 3.7978,
+          "rmse": 5.5125,
+          "lowSeatF1": 0.8736,
+          "zeroSeatRecall": 0.8571
+        },
+        {
+          "validationDate": "2026-06-01",
+          "trainRows": 1501,
+          "validationRows": 436,
+          "mae": 4.3114,
+          "rmse": 6.3189,
+          "lowSeatF1": 0.8194,
+          "zeroSeatRecall": 0.8077
+        },
+        {
+          "validationDate": "2026-06-02",
+          "trainRows": 1648,
+          "validationRows": 289,
+          "mae": 3.9629,
+          "rmse": 5.5592,
+          "lowSeatF1": 0.8462,
+          "zeroSeatRecall": 0.8235
+        }
+      ],
+      "summary": {
+        "foldCount": 6,
+        "maeMean": 4.1027,
+        "rmseMean": 6.0965,
+        "lowSeatF1Mean": 0.8667,
+        "zeroSeatRecallMean": 0.8454
+      }
+    },
+    "randomForest": {
+      "folds": [
+        {
+          "validationDate": "2026-05-28",
+          "trainRows": 1695,
+          "validationRows": 242,
+          "mae": 3.7897,
+          "rmse": 5.6048,
+          "lowSeatF1": 0.8916,
+          "zeroSeatRecall": 0.8387
+        },
+        {
+          "validationDate": "2026-05-29",
+          "trainRows": 1527,
+          "validationRows": 410,
+          "mae": 3.3952,
+          "rmse": 4.8243,
+          "lowSeatF1": 0.8974,
+          "zeroSeatRecall": 0.8958
+        },
+        {
+          "validationDate": "2026-05-30",
+          "trainRows": 1626,
+          "validationRows": 311,
+          "mae": 4.7107,
+          "rmse": 6.7474,
+          "lowSeatF1": 0.887,
+          "zeroSeatRecall": 0.8222
+        },
+        {
+          "validationDate": "2026-05-31",
+          "trainRows": 1688,
+          "validationRows": 249,
+          "mae": 4.5616,
+          "rmse": 6.048,
+          "lowSeatF1": 0.907,
+          "zeroSeatRecall": 0.8214
+        },
+        {
+          "validationDate": "2026-06-01",
+          "trainRows": 1501,
+          "validationRows": 436,
+          "mae": 3.6784,
+          "rmse": 5.3363,
+          "lowSeatF1": 0.8987,
+          "zeroSeatRecall": 0.9231
+        },
+        {
+          "validationDate": "2026-06-02",
+          "trainRows": 1648,
+          "validationRows": 289,
+          "mae": 3.6685,
+          "rmse": 5.0765,
+          "lowSeatF1": 0.9213,
+          "zeroSeatRecall": 0.8824
+        }
+      ],
+      "summary": {
+        "foldCount": 6,
+        "maeMean": 3.9673,
+        "rmseMean": 5.6062,
+        "lowSeatF1Mean": 0.9005,
+        "zeroSeatRecallMean": 0.8639
+      }
+    },
+    "lightgbm": {
+      "folds": [
+        {
+          "validationDate": "2026-05-28",
+          "trainRows": 1695,
+          "validationRows": 242,
+          "mae": 2.5701,
+          "rmse": 4.2641,
+          "lowSeatF1": 0.8916,
+          "zeroSeatRecall": 0.9032
+        },
+        {
+          "validationDate": "2026-05-29",
+          "trainRows": 1527,
+          "validationRows": 410,
+          "mae": 2.7152,
+          "rmse": 3.9974,
+          "lowSeatF1": 0.8874,
+          "zeroSeatRecall": 0.8958
+        },
+        {
+          "validationDate": "2026-05-30",
+          "trainRows": 1626,
+          "validationRows": 311,
+          "mae": 3.0125,
+          "rmse": 4.619,
+          "lowSeatF1": 0.912,
+          "zeroSeatRecall": 0.8222
+        },
+        {
+          "validationDate": "2026-05-31",
+          "trainRows": 1688,
+          "validationRows": 249,
+          "mae": 3.1123,
+          "rmse": 4.2687,
+          "lowSeatF1": 0.9462,
+          "zeroSeatRecall": 0.7857
+        },
+        {
+          "validationDate": "2026-06-01",
+          "trainRows": 1501,
+          "validationRows": 436,
+          "mae": 2.7795,
+          "rmse": 4.4113,
+          "lowSeatF1": 0.8675,
+          "zeroSeatRecall": 0.8077
+        },
+        {
+          "validationDate": "2026-06-02",
+          "trainRows": 1648,
+          "validationRows": 289,
+          "mae": 2.6914,
+          "rmse": 3.6555,
+          "lowSeatF1": 0.8941,
+          "zeroSeatRecall": 0.8824
+        }
+      ],
+      "summary": {
+        "foldCount": 6,
+        "maeMean": 2.8135,
+        "rmseMean": 4.2027,
+        "lowSeatF1Mean": 0.8998,
+        "zeroSeatRecallMean": 0.8495
+      }
+    },
+    "xgboost": {
+      "folds": [
+        {
+          "validationDate": "2026-05-28",
+          "trainRows": 1695,
+          "validationRows": 242,
+          "mae": 2.568,
+          "rmse": 4.3419,
+          "lowSeatF1": 0.9048,
+          "zeroSeatRecall": 0.7097
+        },
+        {
+          "validationDate": "2026-05-29",
+          "trainRows": 1527,
+          "validationRows": 410,
+          "mae": 2.6966,
+          "rmse": 4.0071,
+          "lowSeatF1": 0.8667,
+          "zeroSeatRecall": 0.8125
+        },
+        {
+          "validationDate": "2026-05-30",
+          "trainRows": 1626,
+          "validationRows": 311,
+          "mae": 2.9586,
+          "rmse": 4.6318,
+          "lowSeatF1": 0.912,
+          "zeroSeatRecall": 0.9778
+        },
+        {
+          "validationDate": "2026-05-31",
+          "trainRows": 1688,
+          "validationRows": 249,
+          "mae": 3.3472,
+          "rmse": 4.5595,
+          "lowSeatF1": 0.9231,
+          "zeroSeatRecall": 0.8214
+        },
+        {
+          "validationDate": "2026-06-01",
+          "trainRows": 1501,
+          "validationRows": 436,
+          "mae": 2.7388,
+          "rmse": 4.3505,
+          "lowSeatF1": 0.8712,
+          "zeroSeatRecall": 0.8269
+        },
+        {
+          "validationDate": "2026-06-02",
+          "trainRows": 1648,
+          "validationRows": 289,
+          "mae": 2.7094,
+          "rmse": 3.6245,
+          "lowSeatF1": 0.9231,
+          "zeroSeatRecall": 0.7647
+        }
+      ],
+      "summary": {
+        "foldCount": 6,
+        "maeMean": 2.8364,
+        "rmseMean": 4.2526,
+        "lowSeatF1Mean": 0.9002,
+        "zeroSeatRecallMean": 0.8188
+      }
+    },
+    "lightgbmPeriodSpecialized": {
+      "folds": [
+        {
+          "validationDate": "2026-05-28",
+          "trainRows": 1695,
+          "validationRows": 242,
+          "mae": 2.4915,
+          "rmse": 4.1975,
+          "lowSeatF1": 0.881,
+          "zeroSeatRecall": 0.871
+        },
+        {
+          "validationDate": "2026-05-29",
+          "trainRows": 1527,
+          "validationRows": 410,
+          "mae": 2.7877,
+          "rmse": 4.1008,
+          "lowSeatF1": 0.8974,
+          "zeroSeatRecall": 0.8333
+        },
+        {
+          "validationDate": "2026-05-30",
+          "trainRows": 1626,
+          "validationRows": 311,
+          "mae": 3.1,
+          "rmse": 4.7249,
+          "lowSeatF1": 0.896,
+          "zeroSeatRecall": 0.7111
+        },
+        {
+          "validationDate": "2026-05-31",
+          "trainRows": 1688,
+          "validationRows": 249,
+          "mae": 3.3949,
+          "rmse": 4.9228,
+          "lowSeatF1": 0.9231,
+          "zeroSeatRecall": 0.75
+        },
+        {
+          "validationDate": "2026-06-01",
+          "trainRows": 1501,
+          "validationRows": 436,
+          "mae": 2.8192,
+          "rmse": 4.4401,
+          "lowSeatF1": 0.8718,
+          "zeroSeatRecall": 0.75
+        },
+        {
+          "validationDate": "2026-06-02",
+          "trainRows": 1648,
+          "validationRows": 289,
+          "mae": 2.8952,
+          "rmse": 3.9503,
+          "lowSeatF1": 0.9149,
+          "zeroSeatRecall": 0.7059
+        }
+      ],
+      "summary": {
+        "foldCount": 6,
+        "maeMean": 2.9147,
+        "rmseMean": 4.3894,
+        "lowSeatF1Mean": 0.8974,
+        "zeroSeatRecallMean": 0.7702
+      }
+    },
+    "lightgbmRiskSpecialized": {
+      "folds": [
+        {
+          "validationDate": "2026-05-28",
+          "trainRows": 1695,
+          "validationRows": 242,
+          "mae": 2.5867,
+          "rmse": 4.3549,
+          "lowSeatF1": 0.881,
+          "zeroSeatRecall": 0.7419
+        },
+        {
+          "validationDate": "2026-05-29",
+          "trainRows": 1527,
+          "validationRows": 410,
+          "mae": 2.711,
+          "rmse": 4.0444,
+          "lowSeatF1": 0.8944,
+          "zeroSeatRecall": 0.8125
+        },
+        {
+          "validationDate": "2026-05-30",
+          "trainRows": 1626,
+          "validationRows": 311,
+          "mae": 3.2178,
+          "rmse": 5.0701,
+          "lowSeatF1": 0.8527,
+          "zeroSeatRecall": 0.7778
+        },
+        {
+          "validationDate": "2026-05-31",
+          "trainRows": 1688,
+          "validationRows": 249,
+          "mae": 3.2496,
+          "rmse": 4.5073,
+          "lowSeatF1": 0.9011,
+          "zeroSeatRecall": 0.8571
+        },
+        {
+          "validationDate": "2026-06-01",
+          "trainRows": 1501,
+          "validationRows": 436,
+          "mae": 2.872,
+          "rmse": 4.5951,
+          "lowSeatF1": 0.85,
+          "zeroSeatRecall": 0.8462
+        },
+        {
+          "validationDate": "2026-06-02",
+          "trainRows": 1648,
+          "validationRows": 289,
+          "mae": 2.9089,
+          "rmse": 3.9787,
+          "lowSeatF1": 0.8723,
+          "zeroSeatRecall": 0.8235
+        }
+      ],
+      "summary": {
+        "foldCount": 6,
+        "maeMean": 2.9243,
+        "rmseMean": 4.4251,
+        "lowSeatF1Mean": 0.8752,
+        "zeroSeatRecallMean": 0.8098
+      }
+    }
+  },
+  "latestSegmentBreakdown": {
+    "hour": [
+      {
+        "segment": "0",
+        "rows": 3,
+        "lowSeatRate": 0.0,
+        "zeroSeatRate": 0.0,
+        "metrics": {
+          "baseline": {
+            "rows": 3,
+            "mae": 5.8092,
+            "rmse": 6.7001,
+            "bias": 2.1113,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 3,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 3,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "randomForest": {
+            "rows": 3,
+            "mae": 3.8334,
+            "rmse": 3.898,
+            "bias": -3.8334,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 3,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 3,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbm": {
+            "rows": 3,
+            "mae": 2.3097,
+            "rmse": 2.6154,
+            "bias": 0.3612,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 3,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 3,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "xgboost": {
+            "rows": 3,
+            "mae": 2.3387,
+            "rmse": 2.4411,
+            "bias": -0.2356,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 3,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 3,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 3,
+            "mae": 3.9707,
+            "rmse": 3.987,
+            "bias": -1.3458,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 3,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 3,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 3,
+            "mae": 1.7689,
+            "rmse": 2.0893,
+            "bias": 0.3625,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 3,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 3,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      },
+      {
+        "segment": "5",
+        "rows": 19,
+        "lowSeatRate": 0.2105,
+        "zeroSeatRate": 0.0,
+        "metrics": {
+          "baseline": {
+            "rows": 19,
+            "mae": 2.3271,
+            "rmse": 2.9246,
+            "bias": 1.9172,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 3,
+              "fp": 0,
+              "tn": 15,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.75,
+              "f1": 0.8571
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 1,
+              "tn": 18,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "randomForest": {
+            "rows": 19,
+            "mae": 2.2075,
+            "rmse": 2.8858,
+            "bias": 1.2924,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 4,
+              "fp": 0,
+              "tn": 15,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 2,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbm": {
+            "rows": 19,
+            "mae": 1.9116,
+            "rmse": 2.4057,
+            "bias": -1.1507,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 4,
+              "fp": 0,
+              "tn": 15,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 2,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "xgboost": {
+            "rows": 19,
+            "mae": 2.011,
+            "rmse": 2.5191,
+            "bias": -1.1497,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 4,
+              "fp": 1,
+              "tn": 14,
+              "fn": 0,
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8889
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 2,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 19,
+            "mae": 1.784,
+            "rmse": 2.1901,
+            "bias": -0.9157,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 4,
+              "fp": 1,
+              "tn": 14,
+              "fn": 0,
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8889
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 1,
+              "tn": 18,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 19,
+            "mae": 2.1324,
+            "rmse": 2.7021,
+            "bias": -1.372,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 4,
+              "fp": 1,
+              "tn": 14,
+              "fn": 0,
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.8889
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 2,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      },
+      {
+        "segment": "6",
+        "rows": 45,
+        "lowSeatRate": 0.3556,
+        "zeroSeatRate": 0.1778,
+        "metrics": {
+          "baseline": {
+            "rows": 45,
+            "mae": 4.139,
+            "rmse": 5.6599,
+            "bias": 1.1833,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 14,
+              "fp": 0,
+              "tn": 29,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.875,
+              "f1": 0.9333
+            },
+            "zeroSeat": {
+              "tp": 7,
+              "fp": 4,
+              "tn": 33,
+              "fn": 1,
+              "precision": 0.6364,
+              "recall": 0.875,
+              "f1": 0.7368
+            }
+          },
+          "randomForest": {
+            "rows": 45,
+            "mae": 3.0754,
+            "rmse": 4.2287,
+            "bias": 0.2225,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 16,
+              "fp": 1,
+              "tn": 28,
+              "fn": 0,
+              "precision": 0.9412,
+              "recall": 1.0,
+              "f1": 0.9697
+            },
+            "zeroSeat": {
+              "tp": 7,
+              "fp": 5,
+              "tn": 32,
+              "fn": 1,
+              "precision": 0.5833,
+              "recall": 0.875,
+              "f1": 0.7
+            }
+          },
+          "lightgbm": {
+            "rows": 45,
+            "mae": 2.4397,
+            "rmse": 3.3241,
+            "bias": -0.2335,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 15,
+              "fp": 0,
+              "tn": 29,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.9375,
+              "f1": 0.9677
+            },
+            "zeroSeat": {
+              "tp": 7,
+              "fp": 5,
+              "tn": 32,
+              "fn": 1,
+              "precision": 0.5833,
+              "recall": 0.875,
+              "f1": 0.7
+            }
+          },
+          "xgboost": {
+            "rows": 45,
+            "mae": 2.4047,
+            "rmse": 3.151,
+            "bias": -0.5275,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 16,
+              "fp": 1,
+              "tn": 28,
+              "fn": 0,
+              "precision": 0.9412,
+              "recall": 1.0,
+              "f1": 0.9697
+            },
+            "zeroSeat": {
+              "tp": 7,
+              "fp": 5,
+              "tn": 32,
+              "fn": 1,
+              "precision": 0.5833,
+              "recall": 0.875,
+              "f1": 0.7
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 45,
+            "mae": 2.8347,
+            "rmse": 3.9558,
+            "bias": -1.428,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 16,
+              "fp": 2,
+              "tn": 27,
+              "fn": 0,
+              "precision": 0.8889,
+              "recall": 1.0,
+              "f1": 0.9412
+            },
+            "zeroSeat": {
+              "tp": 7,
+              "fp": 4,
+              "tn": 33,
+              "fn": 1,
+              "precision": 0.6364,
+              "recall": 0.875,
+              "f1": 0.7368
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 45,
+            "mae": 2.9563,
+            "rmse": 4.0916,
+            "bias": -0.2537,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 15,
+              "fp": 2,
+              "tn": 27,
+              "fn": 1,
+              "precision": 0.8824,
+              "recall": 0.9375,
+              "f1": 0.9091
+            },
+            "zeroSeat": {
+              "tp": 7,
+              "fp": 5,
+              "tn": 32,
+              "fn": 1,
+              "precision": 0.5833,
+              "recall": 0.875,
+              "f1": 0.7
+            }
+          }
+        }
+      },
+      {
+        "segment": "7",
+        "rows": 54,
+        "lowSeatRate": 0.2407,
+        "zeroSeatRate": 0.1111,
+        "metrics": {
+          "baseline": {
+            "rows": 54,
+            "mae": 4.8548,
+            "rmse": 6.8114,
+            "bias": -0.0725,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 9,
+              "fp": 0,
+              "tn": 41,
+              "fn": 4,
+              "precision": 1.0,
+              "recall": 0.6923,
+              "f1": 0.8182
+            },
+            "zeroSeat": {
+              "tp": 4,
+              "fp": 2,
+              "tn": 46,
+              "fn": 2,
+              "precision": 0.6667,
+              "recall": 0.6667,
+              "f1": 0.6667
+            }
+          },
+          "randomForest": {
+            "rows": 54,
+            "mae": 3.7222,
+            "rmse": 4.9413,
+            "bias": 0.274,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 12,
+              "fp": 2,
+              "tn": 39,
+              "fn": 1,
+              "precision": 0.8571,
+              "recall": 0.9231,
+              "f1": 0.8889
+            },
+            "zeroSeat": {
+              "tp": 5,
+              "fp": 2,
+              "tn": 46,
+              "fn": 1,
+              "precision": 0.7143,
+              "recall": 0.8333,
+              "f1": 0.7692
+            }
+          },
+          "lightgbm": {
+            "rows": 54,
+            "mae": 3.5691,
+            "rmse": 4.6944,
+            "bias": -0.5714,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 11,
+              "fp": 2,
+              "tn": 39,
+              "fn": 2,
+              "precision": 0.8462,
+              "recall": 0.8462,
+              "f1": 0.8462
+            },
+            "zeroSeat": {
+              "tp": 5,
+              "fp": 2,
+              "tn": 46,
+              "fn": 1,
+              "precision": 0.7143,
+              "recall": 0.8333,
+              "f1": 0.7692
+            }
+          },
+          "xgboost": {
+            "rows": 54,
+            "mae": 3.5297,
+            "rmse": 4.6253,
+            "bias": -0.3609,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 11,
+              "fp": 2,
+              "tn": 39,
+              "fn": 2,
+              "precision": 0.8462,
+              "recall": 0.8462,
+              "f1": 0.8462
+            },
+            "zeroSeat": {
+              "tp": 4,
+              "fp": 1,
+              "tn": 47,
+              "fn": 2,
+              "precision": 0.8,
+              "recall": 0.6667,
+              "f1": 0.7273
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 54,
+            "mae": 3.8918,
+            "rmse": 5.1577,
+            "bias": -1.2414,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 12,
+              "fp": 3,
+              "tn": 38,
+              "fn": 1,
+              "precision": 0.8,
+              "recall": 0.9231,
+              "f1": 0.8571
+            },
+            "zeroSeat": {
+              "tp": 3,
+              "fp": 3,
+              "tn": 45,
+              "fn": 3,
+              "precision": 0.5,
+              "recall": 0.5,
+              "f1": 0.5
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 54,
+            "mae": 4.149,
+            "rmse": 5.5897,
+            "bias": -0.3598,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 11,
+              "fp": 3,
+              "tn": 38,
+              "fn": 2,
+              "precision": 0.7857,
+              "recall": 0.8462,
+              "f1": 0.8148
+            },
+            "zeroSeat": {
+              "tp": 5,
+              "fp": 2,
+              "tn": 46,
+              "fn": 1,
+              "precision": 0.7143,
+              "recall": 0.8333,
+              "f1": 0.7692
+            }
+          }
+        }
+      },
+      {
+        "segment": "8",
+        "rows": 33,
+        "lowSeatRate": 0.1515,
+        "zeroSeatRate": 0.0303,
+        "metrics": {
+          "baseline": {
+            "rows": 33,
+            "mae": 5.4301,
+            "rmse": 7.1592,
+            "bias": -1.2856,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 4,
+              "fp": 0,
+              "tn": 28,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8889
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 1,
+              "tn": 31,
+              "fn": 0,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6667
+            }
+          },
+          "randomForest": {
+            "rows": 33,
+            "mae": 4.3066,
+            "rmse": 6.0395,
+            "bias": -0.6947,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 4,
+              "fp": 0,
+              "tn": 28,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8889
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 1,
+              "tn": 31,
+              "fn": 0,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6667
+            }
+          },
+          "lightgbm": {
+            "rows": 33,
+            "mae": 2.9971,
+            "rmse": 4.394,
+            "bias": 0.0896,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 3,
+              "fp": 0,
+              "tn": 28,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.6,
+              "f1": 0.75
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 1,
+              "tn": 31,
+              "fn": 0,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6667
+            }
+          },
+          "xgboost": {
+            "rows": 33,
+            "mae": 3.0343,
+            "rmse": 4.35,
+            "bias": -0.2162,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 4,
+              "fp": 0,
+              "tn": 28,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8889
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 1,
+              "tn": 31,
+              "fn": 1,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 33,
+            "mae": 3.0256,
+            "rmse": 4.4325,
+            "bias": -0.0067,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 4,
+              "fp": 0,
+              "tn": 28,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.8889
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 1,
+              "tn": 31,
+              "fn": 1,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 33,
+            "mae": 3.4301,
+            "rmse": 4.452,
+            "bias": 0.058,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 4,
+              "fp": 1,
+              "tn": 27,
+              "fn": 1,
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 1,
+              "tn": 31,
+              "fn": 1,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      },
+      {
+        "segment": "9",
+        "rows": 21,
+        "lowSeatRate": 0.0952,
+        "zeroSeatRate": 0.0476,
+        "metrics": {
+          "baseline": {
+            "rows": 21,
+            "mae": 5.7592,
+            "rmse": 7.1907,
+            "bias": -3.1274,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 19,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.5,
+              "f1": 0.6667
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "randomForest": {
+            "rows": 21,
+            "mae": 4.0647,
+            "rmse": 5.8768,
+            "bias": -1.9977,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 2,
+              "fp": 0,
+              "tn": 19,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "lightgbm": {
+            "rows": 21,
+            "mae": 1.6398,
+            "rmse": 2.1264,
+            "bias": -0.1746,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 2,
+              "fp": 0,
+              "tn": 19,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "xgboost": {
+            "rows": 21,
+            "mae": 1.6473,
+            "rmse": 2.1642,
+            "bias": -0.4326,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 2,
+              "fp": 0,
+              "tn": 19,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 21,
+            "mae": 2.5077,
+            "rmse": 3.3779,
+            "bias": -1.3069,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 2,
+              "fp": 0,
+              "tn": 19,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 21,
+            "mae": 1.8884,
+            "rmse": 2.5638,
+            "bias": -0.5141,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 2,
+              "fp": 0,
+              "tn": 19,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        }
+      },
+      {
+        "segment": "10",
+        "rows": 17,
+        "lowSeatRate": 0.1765,
+        "zeroSeatRate": 0.0588,
+        "metrics": {
+          "baseline": {
+            "rows": 17,
+            "mae": 4.6512,
+            "rmse": 5.8132,
+            "bias": -0.9842,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 14,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.3333,
+              "f1": 0.5
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 16,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "randomForest": {
+            "rows": 17,
+            "mae": 4.1966,
+            "rmse": 6.5379,
+            "bias": -1.9488,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 3,
+              "fp": 0,
+              "tn": 14,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 16,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "lightgbm": {
+            "rows": 17,
+            "mae": 3.3292,
+            "rmse": 4.0988,
+            "bias": -0.4855,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 2,
+              "fp": 0,
+              "tn": 14,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.6667,
+              "f1": 0.8
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 16,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "xgboost": {
+            "rows": 17,
+            "mae": 3.2487,
+            "rmse": 4.0648,
+            "bias": -0.7402,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 3,
+              "fp": 0,
+              "tn": 14,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 16,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 17,
+            "mae": 3.0858,
+            "rmse": 4.0962,
+            "bias": -0.3273,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 3,
+              "fp": 0,
+              "tn": 14,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 16,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 17,
+            "mae": 2.8507,
+            "rmse": 3.64,
+            "bias": -0.5265,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 3,
+              "fp": 0,
+              "tn": 14,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 16,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        }
+      },
+      {
+        "segment": "11",
+        "rows": 20,
+        "lowSeatRate": 0.0,
+        "zeroSeatRate": 0.0,
+        "metrics": {
+          "baseline": {
+            "rows": 20,
+            "mae": 3.6325,
+            "rmse": 5.0432,
+            "bias": -2.6094,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "randomForest": {
+            "rows": 20,
+            "mae": 4.0258,
+            "rmse": 5.2974,
+            "bias": -3.8132,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbm": {
+            "rows": 20,
+            "mae": 2.7253,
+            "rmse": 3.49,
+            "bias": -1.8224,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "xgboost": {
+            "rows": 20,
+            "mae": 2.4878,
+            "rmse": 3.4296,
+            "bias": -1.8039,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 20,
+            "mae": 2.8791,
+            "rmse": 3.654,
+            "bias": -2.015,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 20,
+            "mae": 2.6945,
+            "rmse": 3.5151,
+            "bias": -1.7393,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      },
+      {
+        "segment": "12",
+        "rows": 23,
+        "lowSeatRate": 0.0,
+        "zeroSeatRate": 0.0,
+        "metrics": {
+          "baseline": {
+            "rows": 23,
+            "mae": 2.0891,
+            "rmse": 2.7834,
+            "bias": -0.8423,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 23,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 23,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "randomForest": {
+            "rows": 23,
+            "mae": 3.6316,
+            "rmse": 5.2377,
+            "bias": -1.4113,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 23,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 23,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbm": {
+            "rows": 23,
+            "mae": 2.6926,
+            "rmse": 3.3687,
+            "bias": -1.2645,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 23,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 23,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "xgboost": {
+            "rows": 23,
+            "mae": 3.0218,
+            "rmse": 3.5348,
+            "bias": -1.3442,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 23,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 23,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 23,
+            "mae": 2.6702,
+            "rmse": 3.2996,
+            "bias": -1.3662,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 23,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 23,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 23,
+            "mae": 2.6117,
+            "rmse": 3.0806,
+            "bias": -0.7806,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 23,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 23,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      },
+      {
+        "segment": "13",
+        "rows": 17,
+        "lowSeatRate": 0.0588,
+        "zeroSeatRate": 0.0,
+        "metrics": {
+          "baseline": {
+            "rows": 17,
+            "mae": 2.4934,
+            "rmse": 3.4809,
+            "bias": -1.3681,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 16,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "randomForest": {
+            "rows": 17,
+            "mae": 2.5085,
+            "rmse": 2.8631,
+            "bias": 0.6288,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 16,
+              "fn": 1,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbm": {
+            "rows": 17,
+            "mae": 2.029,
+            "rmse": 2.4109,
+            "bias": 0.4462,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 16,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "xgboost": {
+            "rows": 17,
+            "mae": 2.2719,
+            "rmse": 2.543,
+            "bias": 0.6917,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 16,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 17,
+            "mae": 2.1498,
+            "rmse": 2.5103,
+            "bias": 0.4628,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 16,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 17,
+            "mae": 2.0759,
+            "rmse": 2.676,
+            "bias": 0.0714,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 16,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      },
+      {
+        "segment": "14",
+        "rows": 17,
+        "lowSeatRate": 0.0,
+        "zeroSeatRate": 0.0,
+        "metrics": {
+          "baseline": {
+            "rows": 17,
+            "mae": 2.2177,
+            "rmse": 3.0806,
+            "bias": -0.7822,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "randomForest": {
+            "rows": 17,
+            "mae": 3.4508,
+            "rmse": 4.2342,
+            "bias": -1.6711,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbm": {
+            "rows": 17,
+            "mae": 2.5561,
+            "rmse": 3.7124,
+            "bias": -0.7771,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "xgboost": {
+            "rows": 17,
+            "mae": 2.6478,
+            "rmse": 3.8107,
+            "bias": -0.8647,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 17,
+            "mae": 2.6253,
+            "rmse": 3.7966,
+            "bias": -0.6362,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 17,
+            "mae": 2.4501,
+            "rmse": 3.5645,
+            "bias": -0.5785,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 17,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      },
+      {
+        "segment": "15",
+        "rows": 20,
+        "lowSeatRate": 0.05,
+        "zeroSeatRate": 0.0,
+        "metrics": {
+          "baseline": {
+            "rows": 20,
+            "mae": 2.7614,
+            "rmse": 3.7525,
+            "bias": -0.8134,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 19,
+              "fn": 1,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "randomForest": {
+            "rows": 20,
+            "mae": 5.1596,
+            "rmse": 6.437,
+            "bias": -3.173,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 19,
+              "fn": 1,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbm": {
+            "rows": 20,
+            "mae": 2.3862,
+            "rmse": 3.0715,
+            "bias": -0.7533,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 19,
+              "fn": 1,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "xgboost": {
+            "rows": 20,
+            "mae": 2.3061,
+            "rmse": 2.942,
+            "bias": -1.0025,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 19,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 20,
+            "mae": 2.403,
+            "rmse": 3.0616,
+            "bias": -1.1017,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 19,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 20,
+            "mae": 2.2776,
+            "rmse": 2.8461,
+            "bias": -0.6844,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 1,
+              "fp": 1,
+              "tn": 18,
+              "fn": 0,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6667
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 20,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      }
+    ],
+    "period": [
+      {
+        "segment": "commute_peak",
+        "rows": 153,
+        "lowSeatRate": 0.2353,
+        "zeroSeatRate": 0.1046,
+        "metrics": {
+          "baseline": {
+            "rows": 153,
+            "mae": 4.8925,
+            "rmse": 6.6293,
+            "bias": -0.3841,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 28,
+              "fp": 0,
+              "tn": 117,
+              "fn": 8,
+              "precision": 1.0,
+              "recall": 0.7778,
+              "f1": 0.875
+            },
+            "zeroSeat": {
+              "tp": 13,
+              "fp": 7,
+              "tn": 130,
+              "fn": 3,
+              "precision": 0.65,
+              "recall": 0.8125,
+              "f1": 0.7222
+            }
+          },
+          "randomForest": {
+            "rows": 153,
+            "mae": 3.705,
+            "rmse": 5.1463,
+            "bias": -0.2619,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 34,
+              "fp": 3,
+              "tn": 114,
+              "fn": 2,
+              "precision": 0.9189,
+              "recall": 0.9444,
+              "f1": 0.9315
+            },
+            "zeroSeat": {
+              "tp": 14,
+              "fp": 8,
+              "tn": 129,
+              "fn": 2,
+              "precision": 0.6364,
+              "recall": 0.875,
+              "f1": 0.7368
+            }
+          },
+          "lightgbm": {
+            "rows": 153,
+            "mae": 2.8487,
+            "rmse": 3.9765,
+            "bias": -0.275,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 31,
+              "fp": 2,
+              "tn": 115,
+              "fn": 5,
+              "precision": 0.9394,
+              "recall": 0.8611,
+              "f1": 0.8986
+            },
+            "zeroSeat": {
+              "tp": 14,
+              "fp": 8,
+              "tn": 129,
+              "fn": 2,
+              "precision": 0.6364,
+              "recall": 0.875,
+              "f1": 0.7368
+            }
+          },
+          "xgboost": {
+            "rows": 153,
+            "mae": 2.8336,
+            "rmse": 3.8981,
+            "bias": -0.3885,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 33,
+              "fp": 3,
+              "tn": 114,
+              "fn": 3,
+              "precision": 0.9167,
+              "recall": 0.9167,
+              "f1": 0.9167
+            },
+            "zeroSeat": {
+              "tp": 12,
+              "fp": 7,
+              "tn": 130,
+              "fn": 4,
+              "precision": 0.6316,
+              "recall": 0.75,
+              "f1": 0.6857
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 153,
+            "mae": 3.2041,
+            "rmse": 4.4492,
+            "bias": -1.039,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 34,
+              "fp": 5,
+              "tn": 112,
+              "fn": 2,
+              "precision": 0.8718,
+              "recall": 0.9444,
+              "f1": 0.9067
+            },
+            "zeroSeat": {
+              "tp": 11,
+              "fp": 8,
+              "tn": 129,
+              "fn": 5,
+              "precision": 0.5789,
+              "recall": 0.6875,
+              "f1": 0.6286
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 153,
+            "mae": 3.3329,
+            "rmse": 4.5966,
+            "bias": -0.2597,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 32,
+              "fp": 6,
+              "tn": 111,
+              "fn": 4,
+              "precision": 0.8421,
+              "recall": 0.8889,
+              "f1": 0.8649
+            },
+            "zeroSeat": {
+              "tp": 13,
+              "fp": 8,
+              "tn": 129,
+              "fn": 3,
+              "precision": 0.619,
+              "recall": 0.8125,
+              "f1": 0.7027
+            }
+          }
+        }
+      },
+      {
+        "segment": "off_peak",
+        "rows": 136,
+        "lowSeatRate": 0.0662,
+        "zeroSeatRate": 0.0074,
+        "metrics": {
+          "baseline": {
+            "rows": 136,
+            "mae": 2.9171,
+            "rmse": 4.0288,
+            "bias": -0.7232,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 5,
+              "fp": 0,
+              "tn": 127,
+              "fn": 4,
+              "precision": 1.0,
+              "recall": 0.5556,
+              "f1": 0.7143
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 1,
+              "tn": 134,
+              "fn": 0,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6667
+            }
+          },
+          "randomForest": {
+            "rows": 136,
+            "mae": 3.6274,
+            "rmse": 4.9967,
+            "bias": -1.544,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 7,
+              "fp": 0,
+              "tn": 127,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.7778,
+              "f1": 0.875
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 2,
+              "tn": 133,
+              "fn": 0,
+              "precision": 0.3333,
+              "recall": 1.0,
+              "f1": 0.5
+            }
+          },
+          "lightgbm": {
+            "rows": 136,
+            "mae": 2.5144,
+            "rmse": 3.2568,
+            "bias": -0.8475,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 7,
+              "fp": 0,
+              "tn": 127,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.7778,
+              "f1": 0.875
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 2,
+              "tn": 133,
+              "fn": 0,
+              "precision": 0.3333,
+              "recall": 1.0,
+              "f1": 0.5
+            }
+          },
+          "xgboost": {
+            "rows": 136,
+            "mae": 2.5696,
+            "rmse": 3.2897,
+            "bias": -0.92,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 9,
+              "fp": 1,
+              "tn": 126,
+              "fn": 0,
+              "precision": 0.9,
+              "recall": 1.0,
+              "f1": 0.9474
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 2,
+              "tn": 133,
+              "fn": 0,
+              "precision": 0.3333,
+              "recall": 1.0,
+              "f1": 0.5
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 136,
+            "mae": 2.5478,
+            "rmse": 3.3001,
+            "bias": -0.9096,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 9,
+              "fp": 1,
+              "tn": 126,
+              "fn": 0,
+              "precision": 0.9,
+              "recall": 1.0,
+              "f1": 0.9474
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 1,
+              "tn": 134,
+              "fn": 0,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6667
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 136,
+            "mae": 2.4319,
+            "rmse": 3.1415,
+            "bias": -0.8013,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 9,
+              "fp": 2,
+              "tn": 125,
+              "fn": 0,
+              "precision": 0.8182,
+              "recall": 1.0,
+              "f1": 0.9
+            },
+            "zeroSeat": {
+              "tp": 1,
+              "fp": 2,
+              "tn": 133,
+              "fn": 0,
+              "precision": 0.3333,
+              "recall": 1.0,
+              "f1": 0.5
+            }
+          }
+        }
+      }
+    ],
+    "seatRisk": [
+      {
+        "segment": "zero",
+        "rows": 18,
+        "lowSeatRate": 0.3889,
+        "zeroSeatRate": 0.3333,
+        "metrics": {
+          "baseline": {
+            "rows": 18,
+            "mae": 4.0986,
+            "rmse": 5.7196,
+            "bias": -3.8738,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 6,
+              "fp": 0,
+              "tn": 11,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8571,
+              "f1": 0.9231
+            },
+            "zeroSeat": {
+              "tp": 6,
+              "fp": 0,
+              "tn": 12,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "randomForest": {
+            "rows": 18,
+            "mae": 2.8361,
+            "rmse": 3.9229,
+            "bias": 2.2971,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 6,
+              "fp": 0,
+              "tn": 11,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8571,
+              "f1": 0.9231
+            },
+            "zeroSeat": {
+              "tp": 6,
+              "fp": 0,
+              "tn": 12,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "lightgbm": {
+            "rows": 18,
+            "mae": 2.5341,
+            "rmse": 3.9978,
+            "bias": 1.8818,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 6,
+              "fp": 0,
+              "tn": 11,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8571,
+              "f1": 0.9231
+            },
+            "zeroSeat": {
+              "tp": 6,
+              "fp": 0,
+              "tn": 12,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "xgboost": {
+            "rows": 18,
+            "mae": 2.7357,
+            "rmse": 4.3963,
+            "bias": 2.0754,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 6,
+              "fp": 0,
+              "tn": 11,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8571,
+              "f1": 0.9231
+            },
+            "zeroSeat": {
+              "tp": 6,
+              "fp": 0,
+              "tn": 12,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 18,
+            "mae": 2.9227,
+            "rmse": 4.352,
+            "bias": 2.1207,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 6,
+              "fp": 0,
+              "tn": 11,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8571,
+              "f1": 0.9231
+            },
+            "zeroSeat": {
+              "tp": 5,
+              "fp": 0,
+              "tn": 12,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8333,
+              "f1": 0.9091
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 18,
+            "mae": 3.1157,
+            "rmse": 5.1525,
+            "bias": 2.0801,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 6,
+              "fp": 0,
+              "tn": 11,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8571,
+              "f1": 0.9231
+            },
+            "zeroSeat": {
+              "tp": 6,
+              "fp": 0,
+              "tn": 12,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        }
+      },
+      {
+        "segment": "low_1_10",
+        "rows": 28,
+        "lowSeatRate": 0.6786,
+        "zeroSeatRate": 0.3214,
+        "metrics": {
+          "baseline": {
+            "rows": 28,
+            "mae": 2.9676,
+            "rmse": 4.4426,
+            "bias": -0.9743,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 19,
+              "fp": 0,
+              "tn": 9,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 8,
+              "fp": 8,
+              "tn": 11,
+              "fn": 1,
+              "precision": 0.5,
+              "recall": 0.8889,
+              "f1": 0.64
+            }
+          },
+          "randomForest": {
+            "rows": 28,
+            "mae": 1.9119,
+            "rmse": 2.3806,
+            "bias": 0.1284,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 19,
+              "fp": 0,
+              "tn": 9,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 9,
+              "fp": 10,
+              "tn": 9,
+              "fn": 0,
+              "precision": 0.4737,
+              "recall": 1.0,
+              "f1": 0.6429
+            }
+          },
+          "lightgbm": {
+            "rows": 28,
+            "mae": 1.8378,
+            "rmse": 2.3034,
+            "bias": -0.8113,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 19,
+              "fp": 0,
+              "tn": 9,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 9,
+              "fp": 10,
+              "tn": 9,
+              "fn": 0,
+              "precision": 0.4737,
+              "recall": 1.0,
+              "f1": 0.6429
+            }
+          },
+          "xgboost": {
+            "rows": 28,
+            "mae": 1.7737,
+            "rmse": 2.2946,
+            "bias": -0.302,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 19,
+              "fp": 0,
+              "tn": 9,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 7,
+              "fp": 9,
+              "tn": 10,
+              "fn": 2,
+              "precision": 0.4375,
+              "recall": 0.7778,
+              "f1": 0.56
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 28,
+            "mae": 2.1232,
+            "rmse": 2.9124,
+            "bias": -0.2652,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 19,
+              "fp": 0,
+              "tn": 9,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 7,
+              "fp": 8,
+              "tn": 11,
+              "fn": 2,
+              "precision": 0.4667,
+              "recall": 0.7778,
+              "f1": 0.5833
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 28,
+            "mae": 2.1688,
+            "rmse": 2.8241,
+            "bias": -0.0207,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 19,
+              "fp": 0,
+              "tn": 9,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 8,
+              "fp": 9,
+              "tn": 10,
+              "fn": 1,
+              "precision": 0.4706,
+              "recall": 0.8889,
+              "f1": 0.6154
+            }
+          }
+        }
+      },
+      {
+        "segment": "mid_11_20",
+        "rows": 45,
+        "lowSeatRate": 0.4,
+        "zeroSeatRate": 0.0444,
+        "metrics": {
+          "baseline": {
+            "rows": 45,
+            "mae": 6.4117,
+            "rmse": 8.3403,
+            "bias": -1.6158,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 8,
+              "fp": 0,
+              "tn": 27,
+              "fn": 10,
+              "precision": 1.0,
+              "recall": 0.4444,
+              "f1": 0.6154
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 43,
+              "fn": 2,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "randomForest": {
+            "rows": 45,
+            "mae": 3.5212,
+            "rmse": 4.7778,
+            "bias": -1.3754,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 16,
+              "fp": 3,
+              "tn": 24,
+              "fn": 2,
+              "precision": 0.8421,
+              "recall": 0.8889,
+              "f1": 0.8649
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 43,
+              "fn": 2,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbm": {
+            "rows": 45,
+            "mae": 3.3089,
+            "rmse": 4.5152,
+            "bias": -0.9523,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 13,
+              "fp": 2,
+              "tn": 25,
+              "fn": 5,
+              "precision": 0.8667,
+              "recall": 0.7222,
+              "f1": 0.7879
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 43,
+              "fn": 2,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "xgboost": {
+            "rows": 45,
+            "mae": 3.2174,
+            "rmse": 4.3581,
+            "bias": -1.2533,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 16,
+              "fp": 4,
+              "tn": 23,
+              "fn": 2,
+              "precision": 0.8,
+              "recall": 0.8889,
+              "f1": 0.8421
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 43,
+              "fn": 2,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 45,
+            "mae": 3.5046,
+            "rmse": 4.7114,
+            "bias": -1.8769,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 17,
+              "fp": 4,
+              "tn": 23,
+              "fn": 1,
+              "precision": 0.8095,
+              "recall": 0.9444,
+              "f1": 0.8718
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 1,
+              "tn": 42,
+              "fn": 2,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 45,
+            "mae": 3.5704,
+            "rmse": 5.0702,
+            "bias": -0.2359,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 15,
+              "fp": 5,
+              "tn": 22,
+              "fn": 3,
+              "precision": 0.75,
+              "recall": 0.8333,
+              "f1": 0.7895
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 1,
+              "tn": 42,
+              "fn": 2,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      },
+      {
+        "segment": "safe_21_plus",
+        "rows": 198,
+        "lowSeatRate": 0.0051,
+        "zeroSeatRate": 0.0,
+        "metrics": {
+          "baseline": {
+            "rows": 198,
+            "mae": 3.5348,
+            "rmse": 4.8512,
+            "bias": 0.0636,
+            "thresholds": {
+              "lowSeatThreshold": 10.0,
+              "zeroSeatThreshold": 5.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 197,
+              "fn": 1,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 198,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "randomForest": {
+            "rows": 198,
+            "mae": 4.0261,
+            "rmse": 5.4978,
+            "bias": -1.1773,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 6.0
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 197,
+              "fn": 1,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 198,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbm": {
+            "rows": 198,
+            "mae": 2.686,
+            "rmse": 3.5591,
+            "bias": -0.6345,
+            "thresholds": {
+              "lowSeatThreshold": 8.0,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 197,
+              "fn": 1,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 198,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "xgboost": {
+            "rows": 198,
+            "mae": 2.7238,
+            "rmse": 3.5152,
+            "bias": -0.7933,
+            "thresholds": {
+              "lowSeatThreshold": 8.5,
+              "zeroSeatThreshold": 2.5
+            },
+            "lowSeat": {
+              "tp": 1,
+              "fp": 0,
+              "tn": 197,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 198,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmPeriodSpecialized": {
+            "rows": 198,
+            "mae": 2.8634,
+            "rmse": 3.8484,
+            "bias": -1.1563,
+            "thresholds": {
+              "lowSeatThreshold": 9.5,
+              "zeroSeatThreshold": 2.0
+            },
+            "lowSeat": {
+              "tp": 1,
+              "fp": 2,
+              "tn": 195,
+              "fn": 0,
+              "precision": 0.3333,
+              "recall": 1.0,
+              "f1": 0.5
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 198,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "lightgbmRiskSpecialized": {
+            "rows": 198,
+            "mae": 2.8444,
+            "rmse": 3.7043,
+            "bias": -0.8836,
+            "thresholds": {
+              "lowSeatThreshold": 11.0,
+              "zeroSeatThreshold": 3.0
+            },
+            "lowSeat": {
+              "tp": 1,
+              "fp": 3,
+              "tn": 194,
+              "fn": 0,
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1": 0.4
+            },
+            "zeroSeat": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 198,
+              "fn": 0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      }
+    ]
+  },
+  "serviceCalibration": {
+    "strategy": "subtract_max_segment_overprediction_p75",
+    "source": "train_residuals_only",
+    "corrections": [
+      {
+        "group": "period",
+        "column": "period_segment",
+        "segment": "commute_peak",
+        "rows": 424,
+        "meanOverPrediction": 1.1209,
+        "p75OverPrediction": 1.6015,
+        "correctionSeats": 1.6015
+      },
+      {
+        "group": "period",
+        "column": "period_segment",
+        "segment": "off_peak",
+        "rows": 1224,
+        "meanOverPrediction": 0.8331,
+        "p75OverPrediction": 1.0828,
+        "correctionSeats": 1.0828
+      },
+      {
+        "group": "seatRisk",
+        "column": "seat_risk_segment",
+        "segment": "low_1_10",
+        "rows": 121,
+        "meanOverPrediction": 0.6166,
+        "p75OverPrediction": 0.9188,
+        "correctionSeats": 0.9188
+      },
+      {
+        "group": "seatRisk",
+        "column": "seat_risk_segment",
+        "segment": "mid_11_20",
+        "rows": 160,
+        "meanOverPrediction": 1.108,
+        "p75OverPrediction": 1.7819,
+        "correctionSeats": 1.7819
+      },
+      {
+        "group": "seatRisk",
+        "column": "seat_risk_segment",
+        "segment": "safe_21_plus",
+        "rows": 1209,
+        "meanOverPrediction": 0.9264,
+        "p75OverPrediction": 1.1448,
+        "correctionSeats": 1.1448
+      },
+      {
+        "group": "seatRisk",
+        "column": "seat_risk_segment",
+        "segment": "zero",
+        "rows": 158,
+        "meanOverPrediction": 0.7786,
+        "p75OverPrediction": 0.7961,
+        "correctionSeats": 0.7961
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "5",
+        "rows": 57,
+        "meanOverPrediction": 0.6828,
+        "p75OverPrediction": 0.9425,
+        "correctionSeats": 0.9425
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "6",
+        "rows": 110,
+        "meanOverPrediction": 0.9578,
+        "p75OverPrediction": 1.1578,
+        "correctionSeats": 1.1578
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "7",
+        "rows": 149,
+        "meanOverPrediction": 1.2269,
+        "p75OverPrediction": 1.5621,
+        "correctionSeats": 1.5621
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "8",
+        "rows": 108,
+        "meanOverPrediction": 1.1352,
+        "p75OverPrediction": 2.1299,
+        "correctionSeats": 2.1299
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "9",
+        "rows": 57,
+        "meanOverPrediction": 1.1316,
+        "p75OverPrediction": 1.7056,
+        "correctionSeats": 1.7056
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "10",
+        "rows": 43,
+        "meanOverPrediction": 1.0658,
+        "p75OverPrediction": 1.2976,
+        "correctionSeats": 1.2976
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "11",
+        "rows": 46,
+        "meanOverPrediction": 0.8909,
+        "p75OverPrediction": 1.5266,
+        "correctionSeats": 1.5266
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "12",
+        "rows": 65,
+        "meanOverPrediction": 0.8822,
+        "p75OverPrediction": 1.3018,
+        "correctionSeats": 1.3018
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "13",
+        "rows": 69,
+        "meanOverPrediction": 0.7955,
+        "p75OverPrediction": 1.1486,
+        "correctionSeats": 1.1486
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "14",
+        "rows": 77,
+        "meanOverPrediction": 0.916,
+        "p75OverPrediction": 1.5671,
+        "correctionSeats": 1.5671
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "15",
+        "rows": 101,
+        "meanOverPrediction": 0.8672,
+        "p75OverPrediction": 1.2769,
+        "correctionSeats": 1.2769
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "16",
+        "rows": 116,
+        "meanOverPrediction": 0.7778,
+        "p75OverPrediction": 1.1325,
+        "correctionSeats": 1.1325
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "17",
+        "rows": 131,
+        "meanOverPrediction": 0.9897,
+        "p75OverPrediction": 0.9831,
+        "correctionSeats": 0.9831
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "18",
+        "rows": 112,
+        "meanOverPrediction": 0.7958,
+        "p75OverPrediction": 1.0608,
+        "correctionSeats": 1.0608
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "19",
+        "rows": 109,
+        "meanOverPrediction": 1.0527,
+        "p75OverPrediction": 1.1368,
+        "correctionSeats": 1.1368
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "20",
+        "rows": 89,
+        "meanOverPrediction": 0.7474,
+        "p75OverPrediction": 1.0543,
+        "correctionSeats": 1.0543
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "21",
+        "rows": 80,
+        "meanOverPrediction": 0.6457,
+        "p75OverPrediction": 0.6132,
+        "correctionSeats": 0.6132
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "22",
+        "rows": 77,
+        "meanOverPrediction": 0.6329,
+        "p75OverPrediction": 0.6235,
+        "correctionSeats": 0.6235
+      },
+      {
+        "group": "hour",
+        "column": "kst_hour",
+        "segment": "23",
+        "rows": 46,
+        "meanOverPrediction": 0.6211,
+        "p75OverPrediction": 0.7592,
+        "correctionSeats": 0.7592
+      }
+    ],
+    "rawLightgbm": {
+      "rows": 289,
+      "mae": 2.6914,
+      "rmse": 3.6555,
+      "bias": -0.5444,
+      "thresholds": {
+        "lowSeatThreshold": 8.0,
+        "zeroSeatThreshold": 2.5
+      },
+      "lowSeat": {
+        "tp": 38,
+        "fp": 2,
+        "tn": 242,
+        "fn": 7,
+        "precision": 0.95,
+        "recall": 0.8444,
+        "f1": 0.8941
+      },
+      "zeroSeat": {
+        "tp": 15,
+        "fp": 10,
+        "tn": 262,
+        "fn": 2,
+        "precision": 0.6,
+        "recall": 0.8824,
+        "f1": 0.7143
+      },
+      "overPredictionRate": 0.436,
+      "severeOverPredictionRate": 0.2042,
+      "meanOverPredictionSeats": 1.0735,
+      "p75OverPredictionSeats": 1.7312
+    },
+    "calibratedLightgbm": {
+      "rows": 289,
+      "mae": 3.1322,
+      "rmse": 4.1685,
+      "bias": -2.0354,
+      "thresholds": {
+        "lowSeatThreshold": 8.0,
+        "zeroSeatThreshold": 2.5
+      },
+      "lowSeat": {
+        "tp": 42,
+        "fp": 5,
+        "tn": 239,
+        "fn": 3,
+        "precision": 0.8936,
+        "recall": 0.9333,
+        "f1": 0.913
+      },
+      "zeroSeat": {
+        "tp": 15,
+        "fp": 10,
+        "tn": 262,
+        "fn": 2,
+        "precision": 0.6,
+        "recall": 0.8824,
+        "f1": 0.7143
+      },
+      "overPredictionRate": 0.2561,
+      "severeOverPredictionRate": 0.1003,
+      "meanOverPredictionSeats": 0.5484,
+      "p75OverPredictionSeats": 0.0573
+    }
+  },
+  "bestByLatestHoldoutMae": "lightgbm",
+  "bestByDateCvMae": "lightgbm"
+}

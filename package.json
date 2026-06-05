@@ -1,0 +1,37 @@
+{
+  "name": "queuebus",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "gbis:lookup": "node scripts/gbis-lookup.mjs",
+    "gbis:collect": "node scripts/gbis-collect.mjs",
+    "gbis:collect:once": "node scripts/gbis-collect.mjs --once",
+    "gbis:collect:peak-arrivals": "node scripts/gbis-collect-peak-arrivals.mjs",
+    "gbis:compact": "node scripts/gbis-compact-snapshots.mjs",
+    "gbis:derive": "node scripts/gbis-estimate-boardings.mjs",
+    "gbis:analyze:evening": "node scripts/gbis-analyze-evening.mjs",
+    "gbis:evidence": "node scripts/gbis-competition-evidence.mjs",
+    "gbis:summarize": "node scripts/gbis-summarize.mjs",
+    "seatflow:train": "node scripts/train-seatflow-model.mjs",
+    "seatflow:compare": ".venv/bin/python scripts/compare-seatflow-models.py",
+    "gbis:dashboard": "node scripts/gbis-dashboard-server.mjs",
+    "codex:notify": "node scripts/codex-notify.mjs",
+    "submission:assets": "node scripts/generate-submission-assets.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^6.4.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.6.3"
+  }
+}

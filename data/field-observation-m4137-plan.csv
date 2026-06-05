@@ -1,0 +1,6 @@
+plan_id,priority,observation_window,station_seq,station_name,direction,route_name,recommended_time_kst,min_observation_minutes,data_reason,photo_targets,recording_goal,status
+PLAN-001,P0,weekday_evening,38,명동입구,서울→동탄,M4137,16:30-18:45,90,next_bus_probability_signal_high,wide_queue/line_end/waiting_space/sidewalk,6_bus_arrivals_or_more,planned
+PLAN-002,P0,weekday_evening,39,명동성당,서울→동탄,M4137,17:30-18:45,75,next_bus_probability_signal_high,wide_queue/boarding_scene/waiting_space,4_bus_arrivals_or_more,planned
+PLAN-003,P1,weekday_evening,34,서울역버스환승센터_6번승강장,서울→동탄,M4137,16:45-17:45,60,call_count_adjustment_signal,platform_signage/boarding_queue/waiting_space,4_bus_arrivals_or_more,planned
+PLAN-004,P1,holiday_lunch,5,한신더휴,동탄→서울,M4137,10:30-12:00,90,holiday_lunch_queue_comfort_signal,station_wide/line_end/waiting_space,6_bus_arrivals_or_more,optional
+PLAN-005,P2,holiday_lunch,9,이주택지_상록_경남아파트,동탄→서울,M4137,10:15-13:30,90,holiday_lunch_next_bus_guidance_signal,station_wide/line_end/sidewalk/waiting_space,6_bus_arrivals_or_more,optional

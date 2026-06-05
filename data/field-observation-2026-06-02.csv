@@ -1,0 +1,6 @@
+observation_id,observation_date,observation_time_kst,time_bucket_15m,day_type,station_id,station_name,target_station_seq,route_id,route_name,direction,veh_id,plate_no,bus_arrival_time_kst,bus_departure_time_kst,arrival_rank,predict_time_sec,remain_seat_before_arrival,remain_seat_after_departure,waiting_count_before_bus_arrival,observed_boarded_count,observed_alighting_count,left_waiting_count,failed_boarding_count,estimated_queue_length_meters,sidewalk_blocked_yn,weather,temperature_c,precipitation_yn,observer_alias,data_quality,memo
+FIELD-20260602-001,2026-06-02,08:33,08:30,weekday,55305,이주택지,,M4137,M4137,동탄→서울,,6369,08:33,,,,,,8,8,,0,0,,,,,N,field-1,normal,서울방향 관측. 대기 8명 전원 탑승.
+FIELD-20260602-002,2026-06-02,08:46,08:45,weekday,55305,이주택지,,M4137,M4137,동탄→서울,,1040,08:46,,,,2,,7,3,1,4,4,,,,,N,field-1,normal,"신안2차/반도4차에서 빈자리 2석으로 변경. 이주택지 도착 시 빈자리 2석, 하차 1명 후 3명 탑승."
+FIELD-20260602-003,2026-06-02,09:02,09:00,weekday,55305,이주택지,,M4137,M4137,동탄→서울,,1043,09:02,,,,,,5,1,1,4,4,,,,,N,field-1,normal,남은 인원이 줄을 적극적으로 서지 않는 듯한 행동 관측.
+FIELD-20260602-004,2026-06-02,09:27,09:15,weekday,55305,이주택지,,M4137,M4137,동탄→서울,,4811,09:27,,,,,,3,0,0,3,3,,,,,N,field-1,partial,"현장 관측 종료 시점. 하차 0명, 승차 0명."
+FIELD-20260602-000,2026-06-02,,08:15,weekday,55305,이주택지,,M4137,M4137,동탄→서울,,3293,,,,,,,6,6,,0,0,,,,,N,field-1,partial,"08:33 이전 차량. 정확한 도착 시각 미기록, 대기 6명 전원 탑승."

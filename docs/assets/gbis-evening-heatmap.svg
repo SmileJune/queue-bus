@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1498" height="636" viewBox="0 0 1498 636" role="img">
+  <defs>
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#475569" />
+    </marker>
+    <style>
+      .title { font-family: AppleGothic, Arial, sans-serif; font-size: 30px; font-weight: 700; fill: #0f172a; }
+      .subtitle { font-family: AppleGothic, Arial, sans-serif; font-size: 18px; font-weight: 400; fill: #475569; }
+      .station { font-family: AppleGothic, Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #0f172a; }
+      .meta { font-family: AppleGothic, Arial, sans-serif; font-size: 15px; font-weight: 400; fill: #64748b; }
+      .axis { font-family: AppleGothic, Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #334155; }
+      .value { font-family: AppleGothic, Arial, sans-serif; font-size: 17px; font-weight: 700; fill: #0f172a; }
+      .bucket { font-family: AppleGothic, Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #334155; }
+      .cell { font-family: AppleGothic, Arial, sans-serif; font-size: 14px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+      .legend { font-family: AppleGothic, Arial, sans-serif; font-size: 14px; font-weight: 500; fill: #334155; }
+      .footnote { font-family: AppleGothic, Arial, sans-serif; font-size: 14px; font-weight: 400; fill: #64748b; }
+      .boxTitle { font-family: AppleGothic, Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #0f172a; }
+      .boxBody { font-family: AppleGothic, Arial, sans-serif; font-size: 16px; font-weight: 400; fill: #475569; }
+      .step { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #ffffff; text-anchor: middle; dominant-baseline: middle; }
+      .arrow { fill: none; stroke: #475569; stroke-width: 3; marker-end: url(#arrowHead); }
+    </style>
+  </defs>
+  <rect width="1498" height="636" fill="#ffffff" />
+  
+      <text x="48" y="58" class="title">평일 퇴근 호출·다음차 안내 지표</text>
+      <text x="48" y="92" class="subtitle">각 셀은 다음차 안내가 필요한 저좌석 신호입니다. 높은 구간은 호출 인원과 운수사 수요 알림에 반영합니다.</text>
+      <text x="369" y="134" class="bucket" transform="rotate(-45 369 134)">16:00</text>
+<text x="427" y="134" class="bucket" transform="rotate(-45 427 134)">16:15</text>
+<text x="485" y="134" class="bucket" transform="rotate(-45 485 134)">16:30</text>
+<text x="543" y="134" class="bucket" transform="rotate(-45 543 134)">16:45</text>
+<text x="601" y="134" class="bucket" transform="rotate(-45 601 134)">17:00</text>
+<text x="659" y="134" class="bucket" transform="rotate(-45 659 134)">17:15</text>
+<text x="717" y="134" class="bucket" transform="rotate(-45 717 134)">17:30</text>
+<text x="775" y="134" class="bucket" transform="rotate(-45 775 134)">17:45</text>
+<text x="833" y="134" class="bucket" transform="rotate(-45 833 134)">18:00</text>
+<text x="891" y="134" class="bucket" transform="rotate(-45 891 134)">18:15</text>
+<text x="949" y="134" class="bucket" transform="rotate(-45 949 134)">18:30</text>
+<text x="1007" y="134" class="bucket" transform="rotate(-45 1007 134)">18:45</text>
+<text x="1065" y="134" class="bucket" transform="rotate(-45 1065 134)">19:00</text>
+<text x="1123" y="134" class="bucket" transform="rotate(-45 1123 134)">19:15</text>
+<text x="1181" y="134" class="bucket" transform="rotate(-45 1181 134)">19:30</text>
+<text x="1239" y="134" class="bucket" transform="rotate(-45 1239 134)">19:45</text>
+<text x="1297" y="134" class="bucket" transform="rotate(-45 1297 134)">20:00</text>
+<text x="1355" y="134" class="bucket" transform="rotate(-45 1355 134)">20:15</text>
+<text x="1413" y="134" class="bucket" transform="rotate(-45 1413 134)">20:30</text>
+      
+        <text x="48" y="180" class="station">29. 국가인권위</text>
+        <text x="48" y="202" class="meta">안내 신호</text>
+        
+            <rect x="340" y="156" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="367" y="188" class="cell" fill="#0f172a">n=7</text>
+          
+
+            <rect x="398" y="156" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="425" y="188" class="cell" fill="#0f172a">n=7</text>
+          
+
+            <rect x="456" y="156" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="483" y="188" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="514" y="156" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="541" y="188" class="cell" fill="#0f172a">n=7</text>
+          
+
+            <rect x="572" y="156" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="599" y="188" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="630" y="156" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="657" y="188" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="688" y="156" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="715" y="188" class="cell" fill="#0f172a">n=6</text>
+          
+
+            <rect x="746" y="156" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="773" y="188" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="804" y="156" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="831" y="188" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="862" y="156" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="889" y="188" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="920" y="156" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="947" y="188" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="978" y="156" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1005" y="188" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1036" y="156" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="1063" y="188" class="cell" fill="#0f172a">n=3</text>
+          
+
+            <rect x="1094" y="156" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1121" y="188" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1152" y="156" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="1179" y="188" class="cell" fill="#0f172a">n=6</text>
+          
+
+            <rect x="1210" y="156" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1237" y="188" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1268" y="156" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="1295" y="188" class="cell" fill="#0f172a">n=5</text>
+          
+
+            <rect x="1326" y="156" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="1353" y="188" class="cell" fill="#0f172a">n=7</text>
+          
+
+            <rect x="1384" y="156" width="54" height="52" rx="6" fill="#e2e8f0" />
+            <text x="1411" y="188" class="cell" fill="#0f172a">-</text>
+          
+      
+
+        <text x="48" y="238" class="station">31. 서울시청</text>
+        <text x="48" y="260" class="meta">안내 신호</text>
+        
+            <rect x="340" y="214" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="367" y="246" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="398" y="214" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="425" y="246" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="456" y="214" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="483" y="246" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="514" y="214" width="54" height="52" rx="6" fill="#e2e8f0" />
+            <text x="541" y="246" class="cell" fill="#0f172a">-</text>
+          
+
+            <rect x="572" y="214" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="599" y="246" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="630" y="214" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="657" y="246" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="688" y="214" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="715" y="246" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="746" y="214" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="773" y="246" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="804" y="214" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="831" y="246" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="862" y="214" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="889" y="246" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="920" y="214" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="947" y="246" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="978" y="214" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="1005" y="246" class="cell" fill="#0f172a">n=5</text>
+          
+
+            <rect x="1036" y="214" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1063" y="246" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1094" y="214" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="1121" y="246" class="cell" fill="#0f172a">n=7</text>
+          
+
+            <rect x="1152" y="214" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1179" y="246" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1210" y="214" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1237" y="246" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1268" y="214" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="1295" y="246" class="cell" fill="#0f172a">n=2</text>
+          
+
+            <rect x="1326" y="214" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="1353" y="246" class="cell" fill="#0f172a">n=3</text>
+          
+
+            <rect x="1384" y="214" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="1411" y="246" class="cell" fill="#0f172a">n=1</text>
+          
+      
+
+        <text x="48" y="296" class="station">33. 신한은행본점</text>
+        <text x="48" y="318" class="meta">안내 신호</text>
+        
+            <rect x="340" y="272" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="367" y="304" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="398" y="272" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="425" y="304" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="456" y="272" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="483" y="304" class="cell" fill="#0f172a">n=7</text>
+          
+
+            <rect x="514" y="272" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="541" y="304" class="cell" fill="#0f172a">n=3</text>
+          
+
+            <rect x="572" y="272" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="599" y="304" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="630" y="272" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="657" y="304" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="688" y="272" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="715" y="304" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="746" y="272" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="773" y="304" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="804" y="272" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="831" y="304" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="862" y="272" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="889" y="304" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="920" y="272" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="947" y="304" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="978" y="272" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1005" y="304" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1036" y="272" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1063" y="304" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1094" y="272" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1121" y="304" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1152" y="272" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1179" y="304" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1210" y="272" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1237" y="304" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1268" y="272" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1295" y="304" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1326" y="272" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="1353" y="304" class="cell" fill="#0f172a">n=7</text>
+          
+
+            <rect x="1384" y="272" width="54" height="52" rx="6" fill="#e2e8f0" />
+            <text x="1411" y="304" class="cell" fill="#0f172a">-</text>
+          
+      
+
+        <text x="48" y="354" class="station">34. 서울역환승센터</text>
+        <text x="48" y="376" class="meta">안내 신호</text>
+        
+            <rect x="340" y="330" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="367" y="362" class="cell" fill="#0f172a">n=7</text>
+          
+
+            <rect x="398" y="330" width="54" height="52" rx="6" fill="#fb7185" />
+            <text x="425" y="362" class="cell" fill="#0f172a">30%</text>
+          
+
+            <rect x="456" y="330" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="483" y="362" class="cell" fill="#0f172a">n=4</text>
+          
+
+            <rect x="514" y="330" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="541" y="362" class="cell" fill="#0f172a">n=7</text>
+          
+
+            <rect x="572" y="330" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="599" y="362" class="cell" fill="#0f172a">n=3</text>
+          
+
+            <rect x="630" y="330" width="54" height="52" rx="6" fill="#9f1239" />
+            <text x="657" y="362" class="cell" fill="#ffffff">62%</text>
+          
+
+            <rect x="688" y="330" width="54" height="52" rx="6" fill="#fde68a" />
+            <text x="715" y="362" class="cell" fill="#0f172a">9%</text>
+          
+
+            <rect x="746" y="330" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="773" y="362" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="804" y="330" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="831" y="362" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="862" y="330" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="889" y="362" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="920" y="330" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="947" y="362" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="978" y="330" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1005" y="362" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1036" y="330" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1063" y="362" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1094" y="330" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1121" y="362" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1152" y="330" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1179" y="362" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1210" y="330" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1237" y="362" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1268" y="330" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1295" y="362" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1326" y="330" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1353" y="362" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1384" y="330" width="54" height="52" rx="6" fill="#e2e8f0" />
+            <text x="1411" y="362" class="cell" fill="#0f172a">-</text>
+          
+      
+
+        <text x="48" y="412" class="station">38. 명동입구</text>
+        <text x="48" y="434" class="meta">안내 신호</text>
+        
+            <rect x="340" y="388" width="54" height="52" rx="6" fill="#e11d48" />
+            <text x="367" y="420" class="cell" fill="#0f172a">44%</text>
+          
+
+            <rect x="398" y="388" width="54" height="52" rx="6" fill="#9f1239" />
+            <text x="425" y="420" class="cell" fill="#ffffff">75%</text>
+          
+
+            <rect x="456" y="388" width="54" height="52" rx="6" fill="#9f1239" />
+            <text x="483" y="420" class="cell" fill="#ffffff">67%</text>
+          
+
+            <rect x="514" y="388" width="54" height="52" rx="6" fill="#9f1239" />
+            <text x="541" y="420" class="cell" fill="#ffffff">75%</text>
+          
+
+            <rect x="572" y="388" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="599" y="420" class="cell" fill="#0f172a">n=3</text>
+          
+
+            <rect x="630" y="388" width="54" height="52" rx="6" fill="#9f1239" />
+            <text x="657" y="420" class="cell" fill="#ffffff">92%</text>
+          
+
+            <rect x="688" y="388" width="54" height="52" rx="6" fill="#9f1239" />
+            <text x="715" y="420" class="cell" fill="#ffffff">68%</text>
+          
+
+            <rect x="746" y="388" width="54" height="52" rx="6" fill="#fb7185" />
+            <text x="773" y="420" class="cell" fill="#0f172a">22%</text>
+          
+
+            <rect x="804" y="388" width="54" height="52" rx="6" fill="#fb7185" />
+            <text x="831" y="420" class="cell" fill="#0f172a">25%</text>
+          
+
+            <rect x="862" y="388" width="54" height="52" rx="6" fill="#fde68a" />
+            <text x="889" y="420" class="cell" fill="#0f172a">17%</text>
+          
+
+            <rect x="920" y="388" width="54" height="52" rx="6" fill="#fb7185" />
+            <text x="947" y="420" class="cell" fill="#0f172a">32%</text>
+          
+
+            <rect x="978" y="388" width="54" height="52" rx="6" fill="#fde68a" />
+            <text x="1005" y="420" class="cell" fill="#0f172a">16%</text>
+          
+
+            <rect x="1036" y="388" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1063" y="420" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1094" y="388" width="54" height="52" rx="6" fill="#e11d48" />
+            <text x="1121" y="420" class="cell" fill="#ffffff">46%</text>
+          
+
+            <rect x="1152" y="388" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1179" y="420" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1210" y="388" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1237" y="420" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1268" y="388" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1295" y="420" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1326" y="388" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1353" y="420" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1384" y="388" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="1411" y="420" class="cell" fill="#0f172a">n=1</text>
+          
+      
+
+        <text x="48" y="470" class="station">39. 명동성당</text>
+        <text x="48" y="492" class="meta">안내 신호</text>
+        
+            <rect x="340" y="446" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="367" y="478" class="cell" fill="#0f172a">n=4</text>
+          
+
+            <rect x="398" y="446" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="425" y="478" class="cell" fill="#0f172a">n=4</text>
+          
+
+            <rect x="456" y="446" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="483" y="478" class="cell" fill="#0f172a">n=5</text>
+          
+
+            <rect x="514" y="446" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="541" y="478" class="cell" fill="#0f172a">n=4</text>
+          
+
+            <rect x="572" y="446" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="599" y="478" class="cell" fill="#0f172a">n=1</text>
+          
+
+            <rect x="630" y="446" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="657" y="478" class="cell" fill="#0f172a">n=4</text>
+          
+
+            <rect x="688" y="446" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="715" y="478" class="cell" fill="#0f172a">n=4</text>
+          
+
+            <rect x="746" y="446" width="54" height="52" rx="6" fill="#e11d48" />
+            <text x="773" y="478" class="cell" fill="#0f172a">44%</text>
+          
+
+            <rect x="804" y="446" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="831" y="478" class="cell" fill="#0f172a">n=4</text>
+          
+
+            <rect x="862" y="446" width="54" height="52" rx="6" fill="#e11d48" />
+            <text x="889" y="478" class="cell" fill="#ffffff">46%</text>
+          
+
+            <rect x="920" y="446" width="54" height="52" rx="6" fill="#fb7185" />
+            <text x="947" y="478" class="cell" fill="#0f172a">22%</text>
+          
+
+            <rect x="978" y="446" width="54" height="52" rx="6" fill="#e11d48" />
+            <text x="1005" y="478" class="cell" fill="#0f172a">42%</text>
+          
+
+            <rect x="1036" y="446" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="1063" y="478" class="cell" fill="#0f172a">n=4</text>
+          
+
+            <rect x="1094" y="446" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="1121" y="478" class="cell" fill="#0f172a">n=7</text>
+          
+
+            <rect x="1152" y="446" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1179" y="478" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1210" y="446" width="54" height="52" rx="6" fill="#dcfce7" />
+            <text x="1237" y="478" class="cell" fill="#0f172a">0%</text>
+          
+
+            <rect x="1268" y="446" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="1295" y="478" class="cell" fill="#0f172a">n=6</text>
+          
+
+            <rect x="1326" y="446" width="54" height="52" rx="6" fill="#f1f5f9" />
+            <text x="1353" y="478" class="cell" fill="#0f172a">n=3</text>
+          
+
+            <rect x="1384" y="446" width="54" height="52" rx="6" fill="#e2e8f0" />
+            <text x="1411" y="478" class="cell" fill="#0f172a">-</text>
+          
+      
+      <rect x="48" y="566" width="24" height="18" rx="4" fill="#dcfce7" /><text x="82" y="580" class="legend">0%</text>
+      <rect x="140" y="566" width="24" height="18" rx="4" fill="#fde68a" /><text x="174" y="580" class="legend">1~19%</text>
+      <rect x="260" y="566" width="24" height="18" rx="4" fill="#fb7185" /><text x="294" y="580" class="legend">20~39%</text>
+      <rect x="398" y="566" width="24" height="18" rx="4" fill="#e11d48" /><text x="432" y="580" class="legend">40~59%</text>
+      <rect x="540" y="566" width="24" height="18" rx="4" fill="#9f1239" /><text x="574" y="580" class="legend">60%+</text>
+      <text x="48" y="606" class="footnote">출처: data/gbis-evening-station-buckets.csv</text>
+    
+</svg>

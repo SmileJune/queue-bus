@@ -1,0 +1,6 @@
+collected_at,route_id,route_name,target_station_id,target_station_name,vehicle_id,plate_no,current_station_id,current_station_seq,target_station_seq,remain_seat_count,eta_minutes,state,weather,temperature,is_commute_time
+2026-06-03T18:05:00+09:00,R-M5107,M5107,S-GANGNAM-01,강남역 광역버스 정류장,V-101,12가3456,S-SEOCHO-02,11,15,12,4,운행중,맑음,29,true
+2026-06-03T18:07:00+09:00,R-M5107,M5107,S-GANGNAM-01,강남역 광역버스 정류장,V-102,34나7890,S-YANGJAE-01,9,15,21,11,운행중,맑음,29,true
+2026-06-03T18:08:00+09:00,R-M7412,M7412,S-GANGNAM-01,강남역 광역버스 정류장,V-201,56다1122,S-SEOCHO-02,12,16,8,5,운행중,맑음,29,true
+2026-06-03T18:10:00+09:00,R-M7412,M7412,S-GANGNAM-01,강남역 광역버스 정류장,V-202,78라3344,S-YANGJAE-01,10,16,16,12,운행중,맑음,29,true
+

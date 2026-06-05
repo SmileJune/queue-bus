@@ -1,0 +1,15 @@
+[Unit]
+Description=QueueBus GBIS collector
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/queue-bus
+ExecStart=/usr/bin/npm run gbis:collect
+Restart=always
+RestartSec=10
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=default.target

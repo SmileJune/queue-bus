@@ -1,0 +1,10 @@
+[Unit]
+Description=QueueBus GBIS boarding estimate derivation
+After=queuebus-gbis-collector.service
+
+[Service]
+Type=oneshot
+User=queuebus
+WorkingDirectory=/home/queuebus/queue-bus
+ExecStart=/usr/bin/npm run gbis:derive
+Environment=NODE_ENV=production

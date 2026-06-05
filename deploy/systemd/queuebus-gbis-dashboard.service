@@ -1,0 +1,18 @@
+[Unit]
+Description=QueueBus GBIS dashboard
+After=network-online.target queuebus-gbis-collector.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=queuebus
+WorkingDirectory=/home/queuebus/queue-bus
+ExecStart=/usr/bin/npm run gbis:dashboard
+Restart=always
+RestartSec=10
+Environment=NODE_ENV=production
+Environment=GBIS_DASHBOARD_HOST=0.0.0.0
+Environment=GBIS_DASHBOARD_PORT=4175
+
+[Install]
+WantedBy=multi-user.target
