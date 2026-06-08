@@ -48,6 +48,8 @@ docs/
   16-submission-prep-checklist.md
   17-field-observation-pack.md
   18-submission-visual-assets.md
+  26-submission-document-map.md
+  27-application-copy-paste.md
 deploy/
   systemd/
 data/
@@ -84,8 +86,11 @@ src/
 6. `docs/05-competition-fit.md`로 아이디어 분야 평가지표별 강점을 점검합니다.
 7. `data/field-observation-template.csv`로 현장 관찰 데이터를 1회 이상 수집합니다.
 8. `docs/16-submission-prep-checklist.md`와 `docs/17-field-observation-pack.md`로 제출 전 준비와 현장조사 동선을 점검합니다.
-9. `npm run submission:assets`로 제출용 도표를 생성합니다.
-10. 프로토타입을 실행해 사용자 흐름과 운영자 대시보드를 발표 시연에 사용합니다.
+9. `docs/26-submission-document-map.md`로 공식 제출 파일 4종에 들어갈 내용을 확인합니다.
+10. `docs/27-application-copy-paste.md`에서 참가신청서와 사업계획서 항목별 복붙 문구를 가져옵니다.
+11. `npm run submission:assets`로 제출용 도표를 생성합니다.
+12. 프로토타입을 실행해 사용자 흐름과 운영자 대시보드를 발표 시연에 사용합니다.
+13. HWP 편집이 어려운 환경에서는 `.venv-hwp/bin/python scripts/create_submission_pdfs.py`로 `submission/pdf/` 아래 제출용 PDF 초안을 생성합니다.
 
 ## 현재 가정
 

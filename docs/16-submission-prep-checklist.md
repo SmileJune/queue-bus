@@ -20,9 +20,9 @@
 
 | 파일 | 제출 형식 | 현재 상태 | 담당 |
 | --- | --- | --- | --- |
-| `아이디어_QueueBus팀_참가신청서.pdf` | 대표자 서명/날인 PDF | 공식 양식 다운로드 후 작성 필요 | 사용자 |
-| `아이디어_QueueBus팀_사업계획서.hwp` 또는 PDF/Word | 사업계획서 | [08-application-form-business-plan.md](/Users/yun-iljun/programming/queue-bus/docs/08-application-form-business-plan.md) 원고 보강 중 | Codex + 사용자 |
-| `아이디어_QueueBus팀_동의서.pdf` | 개인정보수집 이용동의서 및 서약서, 대표자 서명/날인 PDF | 공식 양식 다운로드 후 작성 필요 | 사용자 |
+| `아이디어_QueueBus팀_참가신청서.pdf` | 대표자 서명/날인 PDF | [submission/pdf/아이디어_QueueBus팀_참가신청서.pdf](/Users/yun-iljun/programming/queue-bus/submission/pdf/아이디어_QueueBus팀_참가신청서.pdf) 초안 생성, 개인정보·서명 필요 | 사용자 |
+| `아이디어_QueueBus팀_사업계획서.pdf` | 사업계획서 | [submission/pdf/아이디어_QueueBus팀_사업계획서.pdf](/Users/yun-iljun/programming/queue-bus/submission/pdf/아이디어_QueueBus팀_사업계획서.pdf) 생성 | Codex + 사용자 |
+| `아이디어_QueueBus팀_동의서.pdf` | 개인정보수집 이용동의서 및 서약서, 대표자 서명/날인 PDF | [submission/pdf/아이디어_QueueBus팀_동의서.pdf](/Users/yun-iljun/programming/queue-bus/submission/pdf/아이디어_QueueBus팀_동의서.pdf) 초안 생성, 개인정보·동의 체크·서명 필요 | 사용자 |
 | `아이디어_QueueBus팀_신분증사본.pdf` | 청년 1인 이상 신분증 사본 | 개인정보 마스킹 후 준비 필요 | 사용자 |
 
 사업계획서는 공식 양식에 직접 옮길 때 20페이지 이내로 유지하고, 표·그래프·현장 사진·프로토타입 캡처를 핵심 페이지만 삽입합니다.
@@ -32,6 +32,8 @@
 | 우선순위 | 작업 | 산출물 | 상태 |
 | --- | --- | --- | --- |
 | P0 | 공식 제출 요건 확인 | 본 체크리스트 | 완료 |
+| P0 | 공식 제출 파일별 원천 문서 매핑 | [26-submission-document-map.md](/Users/yun-iljun/programming/queue-bus/docs/26-submission-document-map.md) | 완료 |
+| P0 | 참가신청서·사업계획서 복붙 문구 정리 | [27-application-copy-paste.md](/Users/yun-iljun/programming/queue-bus/docs/27-application-copy-paste.md) | 완료 |
 | P0 | 사업계획서 본문에 GBIS 객관 근거 반영 | [08-application-form-business-plan.md](/Users/yun-iljun/programming/queue-bus/docs/08-application-form-business-plan.md), [19-final-submission-business-plan.md](/Users/yun-iljun/programming/queue-bus/docs/19-final-submission-business-plan.md) | 완료 |
 | P0 | 제출 근거 리포트 정리 | [15-gbis-evidence-report.md](/Users/yun-iljun/programming/queue-bus/docs/15-gbis-evidence-report.md) | 완료, 제출 전 재생성 필요 |
 | P0 | 삽입용 도표 생성 | [18-submission-visual-assets.md](/Users/yun-iljun/programming/queue-bus/docs/18-submission-visual-assets.md) | 완료 |

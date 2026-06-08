@@ -10,3 +10,6 @@ logs/
 .serena/
 __pycache__/
 *.pyc
+.venv-hwp/
+tmp_hwp_*
+submission/_preview/
