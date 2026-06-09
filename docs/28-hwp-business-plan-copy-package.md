@@ -47,6 +47,40 @@
 
 ![07-privacy-data-flow](../submission/hwp-assets/07-privacy-data-flow.png)
 
+## 표 이미지 모음
+
+아래 표 이미지는 HWP에서 표를 직접 다시 만들지 않고, 이미지로 바로 삽입할 수 있도록 `submission/hwp-assets/tables/`에 만든 파일입니다. 텍스트를 수정해야 하면 아래 본문의 원본 표를 사용하고, 그대로 제출서에 넣을 때는 PNG를 삽입합니다.
+
+| 순서 | 삽입 위치 | 표 이미지 |
+| --- | --- | --- |
+| 1 | Ⅰ-2 필요성 및 창의성, 현장 실사 근거 | [01-field-observation-table.png](/Users/yun-iljun/programming/queue-bus/submission/hwp-assets/tables/01-field-observation-table.png) |
+| 2 | Ⅱ-1 사업모델의 시장성 | [02-market-entry-table.png](/Users/yun-iljun/programming/queue-bus/submission/hwp-assets/tables/02-market-entry-table.png) |
+| 3 | Ⅱ-2 시장 내 차별성 | [03-service-comparison-table.png](/Users/yun-iljun/programming/queue-bus/submission/hwp-assets/tables/03-service-comparison-table.png) |
+| 4 | Ⅲ-1 사업 추진 목표 및 추진 계획 | [04-roadmap-table.png](/Users/yun-iljun/programming/queue-bus/submission/hwp-assets/tables/04-roadmap-table.png) |
+| 5 | Ⅲ-1 성과목표 | [05-kpi-table.png](/Users/yun-iljun/programming/queue-bus/submission/hwp-assets/tables/05-kpi-table.png) |
+| 6 | Ⅲ-1 사회문제 해결 및 ESG | [06-esg-table.png](/Users/yun-iljun/programming/queue-bus/submission/hwp-assets/tables/06-esg-table.png) |
+| 7 | Ⅳ-1 사업모델 구현 방안 및 기술력 | [07-technology-architecture-table.png](/Users/yun-iljun/programming/queue-bus/submission/hwp-assets/tables/07-technology-architecture-table.png) |
+| 8 | Ⅳ-1 AI 활용 계획 | [08-ai-modules-table.png](/Users/yun-iljun/programming/queue-bus/submission/hwp-assets/tables/08-ai-modules-table.png) |
+| 9 | Ⅳ-1 개인정보 및 위치정보 보호 | [09-risk-response-table.png](/Users/yun-iljun/programming/queue-bus/submission/hwp-assets/tables/09-risk-response-table.png) |
+
+![01-field-observation-table](../submission/hwp-assets/tables/01-field-observation-table.png)
+
+![02-market-entry-table](../submission/hwp-assets/tables/02-market-entry-table.png)
+
+![03-service-comparison-table](../submission/hwp-assets/tables/03-service-comparison-table.png)
+
+![04-roadmap-table](../submission/hwp-assets/tables/04-roadmap-table.png)
+
+![05-kpi-table](../submission/hwp-assets/tables/05-kpi-table.png)
+
+![06-esg-table](../submission/hwp-assets/tables/06-esg-table.png)
+
+![07-technology-architecture-table](../submission/hwp-assets/tables/07-technology-architecture-table.png)
+
+![08-ai-modules-table](../submission/hwp-assets/tables/08-ai-modules-table.png)
+
+![09-risk-response-table](../submission/hwp-assets/tables/09-risk-response-table.png)
+
 ## Ⅰ. 기업가 정신
 
 ## 1. 추진역량
